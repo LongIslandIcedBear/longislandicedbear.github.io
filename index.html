@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Retro Computer</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="desktop-window">
+        <div class="title-bar">
+            <span class="title">RETRO COMPUTER</span>
+            <div class="status-bar">
+                <span class="icon"><img src="svg/1battery.svg" alt="Battery" class="svg-icon"></span>
+                <span class="icon"><img src="svg/1bluetooth.svg" alt="Bluetooth" class="svg-icon"></span>
+                <span class="icon"><img src="svg/1wifi.svg" alt="WiFi" class="svg-icon"></span>
+                <span class="icon"><img src="svg/1search.svg" alt="Search" class="svg-icon"></span>
+                <span class="icon" id="datetime"></span>
+            </div>
+        </div>
+        <div class="content">
+            <div class="windows">
+                <div class="window lorem">
+                    <div class="title-bar">
+                        <span class="title">Lorem</span>
+                    </div>
+                    <div class="content">
+                        <p>lorem ipsum</p>
+                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+                    </div>
+                </div>
+                <div class="window login">
+                    <div class="title-bar">
+                        <span class="title">Login</span>
+                    </div>
+                    <div class="content">
+                        <label for="username">Username:</label>
+                        <input type="text" id="username">
+                        <label for="password">Password:</label>
+                        <input type="password" id="password">
+                        <button>Ok</button>
+                    </div>
+                </div>
+                <div class="window folders">
+                    <div class="title-bar">
+                        <span class="title">Folders</span>
+                    </div>
+                    <div class="content">
+                        <div class="folder">📁</div>
+                        <div class="folder">📁</div>
+                        <div class="folder">📁</div>
+                        <div class="folder">📁</div>
+                    </div>
+                </div>
+                <div class="window progress">
+                    <div class="title-bar">
+                        <span class="title">Progress</span>
+                    </div>
+                    <div class="content">
+                        <div class="progress-bar"></div>
+                        <button>Ok</button>
+                    </div>
+                </div>
+                <div class="window chat">
+                    <div class="title-bar">
+                        <span class="title">Chat</span>
+                    </div>
+                    <div class="content">
+                        <div class="message">User: Hello</div>
+                        <div class="message">You: Hi</div>
+                        <input type="text" placeholder="Type a message">
+                        <button>Send</button>
+                    </div>
+                </div>
+            </div>
+            <div class="taskbar">
+                <span class="icon">📧</span>
+                <span class="icon">📅</span>
+                <span class="icon">💬</span>
+                <span class="icon">🎵</span>
+                <span class="icon">🌐</span>
+                <span class="icon">📁</span>
+                <span class="icon">🗑️</span>
+            </div>
+        </div>
+    </div>
+    <div class="mobile-message">
+        Unfortunately at Oak Instituto we think mobile second and this website is not available for handheld devices yet.
+    </div>
+    <script src="date.js"></script>
+</body>
+</html>
