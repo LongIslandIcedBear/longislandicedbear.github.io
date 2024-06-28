@@ -64,6 +64,7 @@ body {
     position: relative;
 }
 
+
 .window {
     background-color: #F5ECDC;
     border: 3px solid #5F3B28;
@@ -73,7 +74,7 @@ body {
     padding: 0;
 }
 
-.window .title-bar, .window .title-bar-red{
+.window .title-bar, .window .title-bar-red, .window .title-bar-blue{
     background-color: #F8AC00;
     padding: 5px 5px 5px 10px;
     border-bottom: 3px solid #5F3B28;
@@ -102,12 +103,13 @@ body {
 
 .window.lorem {
     width: 300px;
+    top: -2px;
     background-color: #F5ECDC; /* Soft yellow background */
     padding: 20px;
     display: flex;
     flex-direction: column;
     position: relative; /* Adjust if you want a different layout */
-    left: calc(10% + 50px); /* Start with 10% of the screen width plus 50px */
+    left: calc(3% + 125px); /* Start with 10% of the screen width plus 50px */
 }
 
 .window.lorem .title-bar1 {
@@ -117,10 +119,24 @@ body {
     margin-bottom: 15px;
 }
 
+.window.popout{
+    background-color: #F5ECDC; /* Soft yellow background */
+    padding: 20px 25px;
+    top: 30px;
+    right: calc(1% + 10px); /* Start with 10% of the screen width plus 50px */
+}
+
 .title {
     font-size: 20px;
     font-weight: bold;
     background-color: transparent; /* Removing any background */
+}
+
+.titlepop {
+    font-size: 18px;
+    font-weight: bold;
+    background-color: transparent; /* Removing any background */
+    -webkit-text-stroke: 0.3px #5F3B28;
 }
 
 .left-side {
@@ -157,8 +173,8 @@ body {
 }
 
 .window.folders {
-    top: 300px;
-    right: calc(5% + -20px); /* Start with 10% of the screen width plus 50px */
+    top: 330px;
+    right: calc(5% + 70px); /* Start with 10% of the screen width plus 50px */
 }
 
 .folder-grid {
@@ -219,7 +235,7 @@ body {
     width: 170px; /* Width of the thumb */
     height: 18px; /* Height of the thumb */
     border: 3px solid #5F3B28;
-    background: #FF6B6B; /* Red color for the thumb */
+    background: #FF6B6B;
     border-radius: 15px; /* Fully rounded ends */
 }
 
@@ -230,8 +246,21 @@ body {
     width: 18px; /* Width of the thumb */
     height: 60px; /* Height of the thumb */
     border: 3px solid #5F3B28;
-    background: #FF6B6B; /* Red color for the thumb */
+    background: #FF6B6B;
     border-radius: 15px; /* Fully rounded ends */
+}
+
+.popout-grid{
+    display: flex;
+    align-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+.popout-message p{
+    margin: 5px 0px 0px 0px;
+    font-size: 16px;
+    font-weight: 600;
 }
 
 .icon-bar {
@@ -321,6 +350,12 @@ body {
 .folder-icon {
     width: auto; /* Updated this line */
     height: 60px; /* Updated this line */
+    display: flex;
+}
+
+.popout-icon{
+    width: auto; /* Updated this line */
+    height: 36px; /* Updated this line */
     display: flex;
 }
 
