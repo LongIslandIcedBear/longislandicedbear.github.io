@@ -173,7 +173,7 @@ body {
 }
 
 .window.folders {
-    top: 330px;
+    bottom: calc(1% + 80px); /* Start with 10% of the screen width plus 50px */
     right: calc(5% + 70px); /* Start with 10% of the screen width plus 50px */
 }
 
