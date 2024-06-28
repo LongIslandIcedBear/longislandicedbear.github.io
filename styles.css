@@ -86,17 +86,19 @@ body {
 
 .window .content {
     padding: 10px;
+    font-size: 17px;
+    font-weight: 600;
 }
 
 .lorem {
-    top: 40px;
-    left: 40px;
-    width: 200px;
+    top: 90px;
+    left: 190px;
+    width: 300px;
 }
 
 .login {
-    top: 120px;
-    left: 260px;
+    top: 220px;
+    left: 480px;
     width: 200px;
 }
 
@@ -107,14 +109,14 @@ body {
 }
 
 .progress {
-    top: 280px;
-    left: 220px;
+    top: 80px;
+    left: 470px;
     width: 180px;
 }
 
 .chat {
-    top: 360px;
-    left: 40px;
+    top: 460px;
+    left: 500px;
     width: 200px;
 }
 
