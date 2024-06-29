@@ -17,7 +17,7 @@ body {
     border-radius: 25px;
     box-shadow: 12px 12px 0 #5F3B28;
     padding: 0;
-    width: calc(100% - 340px); /* 50px padding on each side */
+    width: calc(100% - 380px); /* 50px padding on each side */
     height: calc(100% - 200px); /* 50px padding on each side */
     display: flex;
     flex-direction: column;
@@ -189,7 +189,7 @@ body {
 .desktopwithicon2 {
     position: absolute;  /* Position relative to its nearest positioned ancestor */
     top: 40px;           /* Distance from the top of the container */
-    left: 170px;          /* Distance from the left side of the container */
+    left: 160px;          /* Distance from the left side of the container */
     gap: 35px;
     display: flex;
     flex-direction: column;
@@ -447,7 +447,103 @@ body {
     margin: 0;
 }
 
+@media (max-height: 860px) {
+    .desktopwithicon, .desktopwithicon2 {
+        transform: scale(0.90);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
+
+    .desktopwithicon2 {
+        left: 140px;
+    }
+}
+
+@media (max-height: 800px) {
+    .desktopwithicon, .desktopwithicon2 {
+        transform: scale(0.82);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
+
+    .desktopwithicon2 {
+        left: 130px;
+    }
+
+    .window.lorem {
+        transform: scale(0.95);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
+    .window.folders {
+        transform: scale(0.95);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
+    .window.player {
+        transform: scale(0.95);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
+    .window.popout {
+        transform: scale(0.95);
+        transform-origin: top right; /* Adjust the origin if necessary */
+    }
+}
+
+@media (max-height: 790px) {
+    .window.lorem {
+        transform: scale(0.9);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
+    .window.folders {
+        transform: scale(0.9);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
+    .window.player {
+        transform: scale(0.9);
+        transform-origin: top left; /* Adjust the origin if necessary */
+        bottom: calc(5% + 300px); /* Start with 10% of the screen width plus 50px */
+    }
+    .window.popout {
+        transform: scale(0.9);
+        transform-origin: top right; /* Adjust the origin if necessary */
+    }
+    .desktop-window {
+        height: calc(100% - 140px); /* 50px padding on each side */
+    }
+}
+
+@media (max-width: 1340px) {
+    .desktop-window {
+        width: calc(100% - 180px); /* 50px padding on each side */
+    }
+}
+
 @media screen and (max-width: 1000px) {
+    body {
+        background: linear-gradient(to right, #5F3B28, #5F3B28);
+        color: white !important;
+        display: flex !important;
+        justify-content: center !important;
+        align-items: center !important;
+        height: 100vh !important;
+        margin: 0 !important;
+        font-size: 20px !important;
+        text-align: center !important;
+    }
+
+    .desktop-window,
+    .title-bar,
+    .title-bar1,
+    .content,
+    .windows,
+    .window,
+    .taskbar {
+        display: none !important;
+    }
+
+    body .mobile-message {
+        display: block !important;
+    }
+}
+
+@media screen and (max-height: 700px) {
     body {
         background: linear-gradient(to right, #5F3B28, #5F3B28);
         color: white !important;
