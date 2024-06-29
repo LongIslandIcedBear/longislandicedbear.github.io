@@ -68,6 +68,8 @@ body {
     padding: 20px;
     position: relative;
     background-color: #EBD9CA;
+    border-bottom-left-radius: 21px;
+    border-bottom-right-radius: 21px;
 }
 
 
