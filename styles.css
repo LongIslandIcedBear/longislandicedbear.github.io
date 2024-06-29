@@ -113,7 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative; /* Adjust if you want a different layout */
-    left: calc(20% + -70px); /* Start with 10% of the screen width plus 50px */
+    left: calc(24% + -100px); /* Start with 10% of the screen width plus 50px */
 }
 
 .window.lorem .title-bar1 {
@@ -174,6 +174,47 @@ body {
     font-size: 16px;
     line-height: 1.4;
     margin: 5px 0px;
+}
+
+.desktopwithicon {
+    position: absolute;  /* Position relative to its nearest positioned ancestor */
+    top: 40px;           /* Distance from the top of the container */
+    left: 30px;          /* Distance from the left side of the container */
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktopwithicon2 {
+    position: absolute;  /* Position relative to its nearest positioned ancestor */
+    top: 40px;           /* Distance from the top of the container */
+    left: 170px;          /* Distance from the left side of the container */
+    gap: 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.desktop-icons {
+    gap: 8px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.icon-name {
+    background-color: #5F3B28;
+    border: 1px solid#5F3B28;
+    border-radius: 8px;
+    padding: 4px 9px;
+}
+
+.icon-name p{
+    color: #F5ECDC;
+    margin: 0;
+    font-size: 16px;
+    font-weight: 500;
 }
 
 .window.folders {
@@ -397,6 +438,13 @@ body {
     width: auto; /* Updated this line */
     height: 36px; /* Updated this line */
     display: flex;
+}
+
+.desktop-icon{
+    width: auto; /* Updated this line */
+    height: 75px; /* Updated this line */
+    display: flex;
+    margin: 0;
 }
 
 @media screen and (max-width: 1000px) {
