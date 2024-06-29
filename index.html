@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/png" href="svg/favicon.svg">
     <title>Oak Instituto</title>
     <link rel="stylesheet" href="styles.css">
 </head>
@@ -50,6 +51,23 @@
                         <div class="fake-thumb-vertical"></div>
                     </div>
                 </div>
+                <div class="window player">
+                    <div class="title-bar-blue">
+                        <img src="svg/1buttons.svg" alt="Icon 1" class="button-icon"> <!-- Top right corner icons -->
+                    </div>
+                    <div class="player-controls">
+                        <img src="svg/1previous.svg" alt="Previous" class="control-icon disabled">
+                        <img src="svg/1play.svg" alt="Play" class="control-icon play-pause" id="playPauseBtn">
+                        <img src="svg/1next.svg" alt="Next" class="control-icon disabled">
+                    </div>
+                    <div class="player-content">
+                        <p>Karakuri Pierrot (8-Bit) - 40mP</p>
+                    </div>
+                    <audio id="audioPlayer" loop>
+                        <source src="files/KarakuriPierrot8Bit.mp3" type="audio/mp3">
+                        Your browser does not support the audio element.
+                    </audio>
+                </div>
                 <div class="window lorem">
                     <div class="title-bar1">
                         <div class="left-side">
@@ -94,8 +112,10 @@
         </div>
     </div>
     <div class="mobile-message">
-        Unfortunately at Oak Instituto we think mobile second and this website is not available for handheld devices yet.
+        <img src="svg/0mobile.svg" alt="Home" class="mobile-icon">
+        <p>Unfortunately at Oak Instituto we think mobile second and this website is not available for handheld devices yet.</p>
     </div>
     <script src="date.js"></script>
+    <script src="musicplayer.js"></script>
 </body>
 </html>

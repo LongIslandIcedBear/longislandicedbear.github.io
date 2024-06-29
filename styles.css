@@ -17,8 +17,8 @@ body {
     border-radius: 25px;
     box-shadow: 12px 12px 0 #5F3B28;
     padding: 0;
-    width: calc(100% - 240px); /* 50px padding on each side */
-    height: calc(100% - 170px); /* 50px padding on each side */
+    width: calc(100% - 340px); /* 50px padding on each side */
+    height: calc(100% - 200px); /* 50px padding on each side */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -85,7 +85,7 @@ body {
     align-items: center;
 }
 
-.window .title-bar-red {
+.window .title-bar-red, .window .title-bar-blue {
     background-color: #FC6F60;
     display: flex;
     justify-content: flex-end;
@@ -93,6 +93,10 @@ body {
     padding: 8px;
     width: 100%;
     box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.window .title-bar-blue {
+    background-color: #1D8DC0;
 }
 
 .window .content {
@@ -109,7 +113,7 @@ body {
     display: flex;
     flex-direction: column;
     position: relative; /* Adjust if you want a different layout */
-    left: calc(3% + 125px); /* Start with 10% of the screen width plus 50px */
+    left: calc(20% + -70px); /* Start with 10% of the screen width plus 50px */
 }
 
 .window.lorem .title-bar1 {
@@ -250,6 +254,11 @@ body {
     border-radius: 15px; /* Fully rounded ends */
 }
 
+.window.player {
+    bottom: calc(5% + 320px); /* Start with 10% of the screen width plus 50px */
+    right: calc(55% + -360px); /* Start with 10% of the screen width plus 50px */
+}
+
 .popout-grid{
     display: flex;
     align-content: center;
@@ -319,6 +328,37 @@ body {
     margin-bottom: 10px;
 }
 
+.player-controls {
+    display: flex;
+    justify-content: center;
+    padding: 30px 10px 25px 10px;
+    gap: 10px;
+}
+
+.player-content {
+    padding: 0px 25px 20px 25px;
+}
+.player-content p{
+    margin: 0;
+    font-size: 16px;
+    -webkit-text-stroke: 0.5px#5F3B28;
+}
+
+.control-icon {
+    cursor: pointer;
+    margin: 0 10px;
+    width: auto;
+    height: 25px;
+}
+
+.control-icon.disabled {
+    cursor: default;
+}
+
+.control-icon.play-pause {
+    transition: transform 0.2s ease-in-out;
+}
+
 .svg-icon {
     width: auto; /* Updated this line */
     height: 20px; /* Updated this line */
@@ -359,7 +399,7 @@ body {
     display: flex;
 }
 
-@media screen and (max-width: 800px) {
+@media screen and (max-width: 1000px) {
     body {
         background: linear-gradient(to right, #5F3B28, #5F3B28);
         color: white !important;
@@ -390,5 +430,14 @@ body {
 body .mobile-message {
     display: none;
     padding: 0px 25px;
+}
+
+body .mobile-message p {
     line-height: 1.6rem;
+    color: #F5ECDC;
+}
+
+body .mobile-icon {
+    width: auto; /* Updated this line */
+    height: 125px; /* Updated this line */
 }
