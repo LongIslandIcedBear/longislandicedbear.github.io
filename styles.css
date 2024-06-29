@@ -689,7 +689,7 @@ body {
 
 @media (max-height: 790px) {
     .desktop-window {
-        height: calc(100% - 140px); /* 50px padding on each side */
+        height: calc(100% - 120px); /* 50px padding on each side */
     }
     .window.folders{
         bottom: calc(1% + 60px);
