@@ -11,6 +11,11 @@ body {
     font-size: 18px;
 }
 
+::selection {
+    background: #1D8DC0;
+    color: #F5ECDC;
+}
+
 .desktop-window {
     background-color: #F5ECDC;
     border: 5px solid #5F3B28;
@@ -74,7 +79,7 @@ body {
     padding: 0;
 }
 
-.window .title-bar, .window .title-bar-red, .window .title-bar-blue{
+.window .title-bar, .window .title-bar-red, .window .title-bar-blue, .window .title-bar-green{
     background-color: #F8AC00;
     padding: 5px 5px 5px 10px;
     border-bottom: 3px solid #5F3B28;
@@ -85,7 +90,7 @@ body {
     align-items: center;
 }
 
-.window .title-bar-red, .window .title-bar-blue {
+.window .title-bar-red, .window .title-bar-blue, .window .title-bar-green {
     background-color: #FC6F60;
     display: flex;
     justify-content: flex-end;
@@ -99,6 +104,10 @@ body {
     background-color: #1D8DC0;
 }
 
+.window .title-bar-green {
+    background-color: #00B88B;
+}
+
 .window .content {
     padding: 10px;
     font-size: 17px;
@@ -107,7 +116,6 @@ body {
 
 .window.lorem {
     width: 300px;
-    top: -2px;
     background-color: #F5ECDC; /* Soft yellow background */
     padding: 20px;
     display: flex;
@@ -125,7 +133,7 @@ body {
 
 .window.popout{
     background-color: #F5ECDC; /* Soft yellow background */
-    padding: 20px 25px;
+    padding: 10px 15px 10px 20px;
     top: 30px;
     right: calc(1% + 10px); /* Start with 10% of the screen width plus 50px */
 }
@@ -219,7 +227,7 @@ body {
 
 .window.folders {
     bottom: calc(1% + 80px); /* Start with 10% of the screen width plus 50px */
-    right: calc(5% + 70px); /* Start with 10% of the screen width plus 50px */
+    right: calc(5% + 0px); /* Start with 10% of the screen width plus 50px */
 }
 
 .folder-grid {
@@ -296,8 +304,72 @@ body {
 }
 
 .window.player {
-    bottom: calc(5% + 320px); /* Start with 10% of the screen width plus 50px */
+    bottom: calc(5% + 290px); /* Start with 10% of the screen width plus 50px */
     right: calc(55% + -360px); /* Start with 10% of the screen width plus 50px */
+}
+
+.window.chat {
+    position: absolute;
+    bottom: calc(1% + 125px);
+    right: calc(5% + 360px);
+    width: 300px; /* Adjust width as needed */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.window.chat .title-bar-green {
+    background-color: #00B88B;
+    padding: 5px;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.window.chat .chat-content {
+    padding: 15px 10px 15px 10px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.window.chat .chat-message {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.window.chat .avatar-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.window.chat .chat-bubble {
+    background-color: #F5ECDC;
+    border: 2px solid #5F3B28;
+    border-radius: 5px;
+    padding: 5px 10px;
+    color: #5F3B28;
+    font-size: 14px;
+}
+
+.window.chat .send-section {
+    border-top: 2px solid #5F3B28;
+    display: flex;
+    justify-content: flex-end;
+    padding: 5px 10px;
+}
+
+.window.chat .send-button {
+    font-size: 14px;
+    background-color: #00B88B;
+    border: 2px solid #5F3B28;
+    border-radius: 5px;
+    padding: 5px 15px;
+    color: #F5ECDC;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
 }
 
 .popout-grid{
@@ -313,6 +385,34 @@ body {
     font-weight: 600;
 }
 
+.popout-button-list{
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+    font-size: 14px;
+    cursor: pointer; /* Change cursor to pointer */
+}
+
+.popout-button-list a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit color from parent */
+    display: block; /* Make the anchor tag behave like a block element */
+    text-align: center; /* Center the text inside the button */
+}
+
+.popout-button{
+    background-color: #F5ECDC;
+    color: #5F3B28;
+    padding: 4px 10px;
+    border: 2px solid #5F3B28;
+    border-radius: 5px;
+}
+
+.popout-button:hover {
+    background-color: #5F3B28; /* Change background color to brown on hover */
+    color: #F5ECDC;
+}
+
 .icon-bar {
     display: flex;
     justify-content: space-between;
@@ -323,24 +423,6 @@ body {
 .bottom-icon {
     width: auto; /* Adjust size as needed */
     height: 25px;
-}
-
-.login {
-    top: 220px;
-    left: 480px;
-    width: 200px;
-}
-
-.progress {
-    top: 80px;
-    left: 470px;
-    width: 180px;
-}
-
-.chat {
-    top: 460px;
-    left: 500px;
-    width: 200px;
 }
 
 .taskbar {
@@ -362,13 +444,6 @@ body {
     font-size: 30px;
 }
 
-.progress-bar {
-    width: 100%;
-    height: 10px;
-    background-color: #F8AC00;
-    margin-bottom: 10px;
-}
-
 .player-controls {
     display: flex;
     justify-content: center;
@@ -382,9 +457,98 @@ body {
 .player-content p{
     margin: 0;
     font-size: 16px;
-    -webkit-text-stroke: 0.5px#5F3B28;
 }
 
+.play-pause-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+
+.play-pause-btn-container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.play-pause-btn-container:hover #playPauseBtn {
+    filter: invert(32%) sepia(55%) saturate(603%) hue-rotate(168deg) brightness(96%) contrast(94%);
+}
+
+.window.search{
+    top: calc(5% + 105px); /* Start with 10% of the screen width plus 50px */
+    right: calc(40% + -250px); /* Start with 10% of the screen width plus 50px */
+    width: 400px; /* Adjust width as needed */
+    height: 30px; /* Adjust height as needed */
+    background-color: #F5ECDC;
+    display: flex;
+    align-items: center;
+    padding: 5px 10px 5px 0px;
+    box-shadow: 3px 3px 0 #5F3B28;
+    border-left-width: 0px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.search-icon-container {
+    background-color: #F8AC00;
+    border: 3px solid #5F3B28;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.search-icon {
+    width: 35px; /* Adjust size as needed */
+    height: 35px; /* Adjust size as needed */
+    margin-left: 1px;
+}
+
+.search-bar input[type="text"] {
+    flex: 1;
+    height: 100%;
+    width: 170px;
+    border: none;
+    outline: none;
+    font-size: 18px;
+    background-color: transparent;
+    color: #5F3B28;
+    font-family: 'Courier New', Courier, monospace;
+    padding-left: 5px;
+}
+
+.blinking-cursor {
+    display: inline-block;
+    width: 3px;
+    height: 24px; /* Adjust height as needed */
+    background-color: #5F3B28;
+    animation: blink 1.25s step-end infinite;
+    vertical-align: middle;
+}
+
+@keyframes blink {
+    from, to {
+        opacity: 0;
+    }
+    50% {
+        opacity: 1;
+    }
+}
+
+/* Hide the cursor when the input is focused */
+.search-input:focus + .blinking-cursor {
+    display: none;
+}
 .control-icon {
     cursor: pointer;
     margin: 0 10px;
@@ -447,7 +611,13 @@ body {
     margin: 0;
 }
 
-@media (max-height: 860px) {
+@media (max-height:900px) {
+    .search {
+        display: none !important;
+    }
+}
+
+@media (max-height: 870px) {
     .desktopwithicon, .desktopwithicon2 {
         transform: scale(0.90);
         transform-origin: top left; /* Adjust the origin if necessary */
@@ -458,7 +628,7 @@ body {
     }
 }
 
-@media (max-height: 800px) {
+@media (max-height: 820px) {
     .desktopwithicon, .desktopwithicon2 {
         transform: scale(0.82);
         transform-origin: top left; /* Adjust the origin if necessary */
@@ -469,44 +639,37 @@ body {
     }
 
     .window.lorem {
-        transform: scale(0.95);
+        transform: scale(0.9);
         transform-origin: top left; /* Adjust the origin if necessary */
     }
     .window.folders {
-        transform: scale(0.95);
+        transform: scale(0.9);
         transform-origin: top left; /* Adjust the origin if necessary */
     }
     .window.player {
-        transform: scale(0.95);
+        transform: scale(0.9);
         transform-origin: top left; /* Adjust the origin if necessary */
     }
     .window.popout {
-        transform: scale(0.95);
+        transform: scale(0.9);
         transform-origin: top right; /* Adjust the origin if necessary */
     }
 }
 
+@media (max-height: 810px) {
+    .window.player{
+        bottom: calc(25% + 170px); /* Start with 10% of the screen width plus 50px */
+    }
+}
+
 @media (max-height: 790px) {
-    .window.lorem {
-        transform: scale(0.9);
-        transform-origin: top left; /* Adjust the origin if necessary */
-    }
-    .window.folders {
-        transform: scale(0.9);
-        transform-origin: top left; /* Adjust the origin if necessary */
-    }
-    .window.player {
-        transform: scale(0.9);
-        transform-origin: top left; /* Adjust the origin if necessary */
-        bottom: calc(5% + 300px); /* Start with 10% of the screen width plus 50px */
-    }
-    .window.popout {
-        transform: scale(0.9);
-        transform-origin: top right; /* Adjust the origin if necessary */
-    }
     .desktop-window {
         height: calc(100% - 140px); /* 50px padding on each side */
     }
+    .window.folders{
+        bottom: calc(1% + 60px);
+    }
+
 }
 
 @media (max-width: 1340px) {
@@ -515,7 +678,13 @@ body {
     }
 }
 
-@media screen and (max-width: 1000px) {
+@media (max-width: 1000px) {
+    .desktop-window {
+        width: calc(100% - 80px); /* 50px padding on each side */
+    }
+}
+
+@media screen and (max-width: 960px) {
     body {
         background: linear-gradient(to right, #5F3B28, #5F3B28);
         color: white !important;
