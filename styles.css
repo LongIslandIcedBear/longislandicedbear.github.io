@@ -237,6 +237,28 @@ body {
     padding: 25px 40px 25px 25px;
 }
 
+.folder-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+    padding: 25px 40px 25px 25px;
+    cursor: pointer; /* Make cursor a pointer */
+}
+
+.folder-grid{
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+}
+
+.folder-grid:hover {
+    background-color: #5F3B28; 
+    color: #F5ECDC; /* Change text color on hover */
+}
+
+.folder-grid:hover .folder-item p {
+    color: #F5ECDC; /* Change paragraph text color on hover */
+}
+
 .folder-item {
     display: flex;
     flex-direction: column;
@@ -304,7 +326,7 @@ body {
 }
 
 .window.player {
-    bottom: calc(5% + 290px); /* Start with 10% of the screen width plus 50px */
+    bottom: calc(5% + 301px); /* Start with 10% of the screen width plus 50px */
     right: calc(55% + -360px); /* Start with 10% of the screen width plus 50px */
 }
 
