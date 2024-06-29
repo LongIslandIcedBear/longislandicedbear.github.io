@@ -23,7 +23,7 @@ body {
     box-shadow: 12px 12px 0 #5F3B28;
     padding: 0;
     width: calc(100% - 380px); /* 50px padding on each side */
-    height: calc(100% - 200px); /* 50px padding on each side */
+    height: calc(100% - 170px); /* 50px padding on each side */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -118,6 +118,7 @@ body {
 }
 
 .window.lorem {
+    top: 5px;
     width: 300px;
     background-color: #F5ECDC; /* Soft yellow background */
     padding: 20px;
