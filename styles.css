@@ -22,8 +22,8 @@ body {
     border-radius: 25px;
     box-shadow: 12px 12px 0 #5F3B28;
     padding: 0;
-    width: calc(100% - 380px); /* 50px padding on each side */
-    height: calc(100% - 170px); /* 50px padding on each side */
+    width: 1280px; /* 50px padding on each side */
+    height: 790px; /* 50px padding on each side */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -223,24 +223,41 @@ body {
 }
 
 .desktop-icons {
-    gap: 8px;
+    gap: 7px;
     display: flex;
     flex-direction: column;
     align-items: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: inherit;
+}
+
+
+.desktop-icons:hover img.desktop-icon {
+    filter: sepia(1) hue-rotate(180deg) saturate(3) brightness(0.5) contrast(1.2);
 }
 
 .icon-name {
-    background-color: #5F3B28;
-    border: 1px solid#5F3B28;
+    border: 1px solid #EBD9CA;
     border-radius: 8px;
     padding: 4px 9px;
 }
 
-.icon-name p{
-    color: #F5ECDC;
+.icon-name p {
+    color: #5F3B28;
     margin: 0;
     font-size: 16px;
-    font-weight: 500;
+    font-weight: 600;
+}
+
+.desktop-icons:hover .icon-name {
+    background-color: #5F3B28; /* Change to a darker color */
+    color: #F5ECDC; /* Change text color */
+    border: 1px solid #5F3B28;
+}
+
+.desktop-icons:hover .icon-name p {
+    color: #F5ECDC; /* Change text color */
 }
 
 .window.folders {
@@ -652,9 +669,9 @@ body {
 
 .window.readme {
     top: 15px;
-    left: 16%;
-    width: 72%;
-    height: 80%;
+    left: 15%;
+    width: 70%;
+    height: 85%;
     display: flex;
     flex-direction: column;
 }
@@ -715,8 +732,8 @@ body {
     font-size: 18px;
     cursor: pointer;
     padding: 11px 45px;
-    background-color: #FF9E4F;
-    color: #F5ECDC;
+    background-color: #FFAAA7;
+    color: #5F3B28;
     border-right: 3px solid #5F3B28;
 }
 
@@ -753,8 +770,8 @@ body {
 .content-readme {
     flex: 1; /* Take up the remaining space */
     padding: 5px 20px 20px 20px;
-    font-size: 18px;
-    line-height: 1.5;
+    font-size: 17px;
+    line-height: 1.65;
     overflow-y: auto; /* Add vertical scroll bar */
 }
 
@@ -784,13 +801,7 @@ body {
     display: none;
 }
 
-@media (max-height:900px) {
-    .search {
-        display: none !important;
-    }
-}
-
-@media (max-height: 870px) {
+@media (max-height: 830px) {
     .desktopwithicon, .desktopwithicon2 {
         transform: scale(0.90);
         transform-origin: top left; /* Adjust the origin if necessary */
@@ -798,17 +809,6 @@ body {
 
     .desktopwithicon2 {
         left: 140px;
-    }
-}
-
-@media (max-height: 820px) {
-    .desktopwithicon, .desktopwithicon2 {
-        transform: scale(0.82);
-        transform-origin: top left; /* Adjust the origin if necessary */
-    }
-
-    .desktopwithicon2 {
-        left: 130px;
     }
 
     .window.lorem {
@@ -818,36 +818,37 @@ body {
     .window.folders {
         transform: scale(0.9);
         transform-origin: top left; /* Adjust the origin if necessary */
+        bottom: calc(1% + 60px);
     }
     .window.player {
         transform: scale(0.9);
         transform-origin: top left; /* Adjust the origin if necessary */
+        bottom: calc(25% + 170px); /* Start with 10% of the screen width plus 50px */
     }
     .window.popout {
         transform: scale(0.9);
         transform-origin: top right; /* Adjust the origin if necessary */
     }
-}
 
-@media (max-height: 810px) {
-    .window.player{
-        bottom: calc(25% + 170px); /* Start with 10% of the screen width plus 50px */
-    }
-}
-
-@media (max-height: 790px) {
     .desktop-window {
-        height: calc(100% - 120px); /* 50px padding on each side */
-    }
-    .window.folders{
-        bottom: calc(1% + 60px);
+        height: calc(100% - 80px); /* 50px padding on each side */
     }
 
+    .search {
+        display: none !important;
+    }
+}
+
+@media (max-height: 730px) {
+    .desktopwithicon, .desktopwithicon2 {
+        transform: scale(0.86);
+        transform-origin: top left; /* Adjust the origin if necessary */
+    }
 }
 
 @media (max-width: 1340px) {
     .desktop-window {
-        width: calc(100% - 180px); /* 50px padding on each side */
+        width: calc(100% - 80px); /* 50px padding on each side */
     }
 
     .window.readme {
