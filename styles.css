@@ -492,7 +492,7 @@ body {
 
 .taskbar .icon {
     position: relative;
-    transition: transform 0.3s ease;
+    transition: transform 0.25s ease;
 }
 
 .taskbar .icon:hover {
@@ -500,7 +500,7 @@ body {
 }
 
 .taskbar .icon:hover img {
-    filter: brightness(1.2);
+    filter: brightness(1.15);
 }
 
 .taskbar .icon a {
