@@ -491,7 +491,50 @@ body {
 }
 
 .taskbar .icon {
-    font-size: 30px;
+    position: relative;
+    transition: transform 0.3s ease;
+}
+
+.taskbar .icon:hover {
+    transform: scale(1.2);
+}
+
+.taskbar .icon:hover img {
+    filter: brightness(1.2);
+}
+
+.taskbar .icon a {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: inherit;
+}
+
+.taskbar .icon img {
+    height: 55px;
+    transition: filter 0.3s ease;
+}
+
+.taskbar .icon a::after {
+    content: attr(title);
+    position: absolute;
+    bottom: 115%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: #5F3B28;
+    color: #F5ECDC;
+    padding: 5px 10px;
+    border-radius: 5px;
+    white-space: nowrap;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    font-size: 14px;
+}
+
+.taskbar .icon:hover a::after {
+    opacity: 1;
 }
 
 .player-controls {
@@ -628,12 +671,6 @@ body {
 .menu-icon {
     width: auto; /* Updated this line */
     height: 22px; /* Updated this line */
-}
-
-.home-icon {
-    width: auto; /* Updated this line */
-    height: 55px; /* Updated this line */
-    display: flex;
 }
 
 .button-icon {
@@ -775,6 +812,17 @@ body {
     overflow-y: auto; /* Add vertical scroll bar */
 }
 
+.text-english li{
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 500;
+    line-height: 1.6;
+}
+
+.text-chinese li{
+    font-weight: 500;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
 /* Optional: Styling the scrollbar for better appearance */
 .content-readme::-webkit-scrollbar {
     width: 20px;
@@ -806,34 +854,33 @@ body {
         transform: scale(0.95);
         transform-origin: top left; /* Adjust the origin if necessary */
     }
-
     .desktopwithicon2 {
         left: 160px;
     }
 
+    .desktop-window {
+        height: calc(100% - 80px); /* 50px padding on each side */
+    }
+}
 
-
+@media (max-height: 800px) {
     .window.lorem {
-        transform: scale(0.9);
+        transform: scale(0.95);
         transform-origin: top left; /* Adjust the origin if necessary */
     }
     .window.folders {
-        transform: scale(0.9);
+        transform: scale(0.95);
         transform-origin: top left; /* Adjust the origin if necessary */
         bottom: calc(1% + 60px);
     }
     .window.player {
-        transform: scale(0.9);
+        transform: scale(0.95);
         transform-origin: top left; /* Adjust the origin if necessary */
         bottom: calc(25% + 170px); /* Start with 10% of the screen width plus 50px */
     }
     .window.popout {
-        transform: scale(0.9);
+        transform: scale(0.95);
         transform-origin: top right; /* Adjust the origin if necessary */
-    }
-
-    .desktop-window {
-        height: calc(100% - 80px); /* 50px padding on each side */
     }
 
     .search {
@@ -845,6 +892,9 @@ body {
     .desktopwithicon, .desktopwithicon2 {
         transform: scale(0.86);
         transform-origin: top left; /* Adjust the origin if necessary */
+    }
+    .desktopwithicon2 {
+        left: 150px;
     }
 }
 
