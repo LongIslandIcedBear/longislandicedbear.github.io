@@ -891,6 +891,10 @@ body {
     background-color: #00B88B;
 }
 
+.agree-btn.enabled:hover {
+    background-color: #018d6a;
+}
+
 .decline-btn {
     background-color: #FC6F60;
     color: #F5ECDC;
@@ -899,6 +903,10 @@ body {
     padding: 8px 35px;
     cursor: pointer;
     font-size: 15px;
+}
+
+.decline-btn:hover{
+    background-color: #e64836;
 }
 
 /* 隐藏默认勾选框 */
