@@ -8,6 +8,14 @@
     <link rel="stylesheet" href="../styles.css">
 </head>
 <style>
+    .folder-grid:hover {
+        background-color: #F5ECDC; 
+        cursor: default;
+    }
+
+    .folder-grid:hover .folder-item p {
+        color: #5F3B28;
+    }
     h3{
         background-color: #5F3B28;
         color: #F5ECDC;
@@ -51,7 +59,7 @@
                             <p>vsqx/ust</p>
                         </div>
                     </a>
-                    <a href="#" class="desktop-icons">
+                    <a href="/contact" class="desktop-icons">
                         <img src="../svg/1contact.svg" alt="Contact" class="desktop-icon">
                         <div class="icon-name">
                             <p>e-mail</p>
@@ -71,6 +79,36 @@
                             <p>voicebank</p>
                         </div>
                     </a>
+                </div>
+                <div class="window folders">
+                    <div class="title-bar-red">
+                        <img src="../svg/1buttons.svg" alt="Icon 1" class="button-icon"> <!-- Top right corner icons -->
+                    </div>
+                    <a href="#" class="folder-grid">
+                        <div class="folder-item">
+                            <img src="../svg/1folder.svg" alt="README" class="folder-icon">
+                            <p>README</p>
+                        </div>
+                        <div class="folder-item">
+                            <img src="../svg/1folder.svg" alt="VSQXs" class="folder-icon">
+                            <p>VSQXs</p>
+                        </div>
+                        <div class="folder-item">
+                            <img src="../svg/1folder.svg" alt="USTs" class="folder-icon">
+                            <p>USTs</p>
+                        </div>
+                        <div class="folder-item">
+                            <img src="../svg/1folder.svg" alt="Instrumental" class="folder-icon">
+                            <p>Instrumental</p>
+                        </div>
+                    </a>
+                    <!-- Simulated Scrollbars -->
+                    <div class="fake-scrollbar fake-scrollbar-horizontal">
+                        <div class="fake-thumb-horizontal"></div>
+                    </div>
+                    <div class="fake-scrollbar fake-scrollbar-vertical">
+                        <div class="fake-thumb-vertical"></div>
+                    </div>
                 </div>
                 <div class="window readme" id="readme">
                     <div class="title-bar-white">
@@ -131,7 +169,7 @@
                                 </div>
                             </div>
                             <p class="footer">
-                                © 2024 OAK INSTITUTO. All rights reserved. | Handcrafted by LongIslandIcedBear
+                                © 2024 OAK INSTITUTO | Handcrafted by LongIslandIcedBear
                             </p>
                         </div>
                         <div class="text-chinese">
@@ -170,7 +208,7 @@
                                 </div>
                             </div>
                             <p class="footer">
-                                © 2024 OAK INSTITUTO. All rights reserved. | Handcrafted by LongIslandIcedBear
+                                © 2024 OAK INSTITUTO | Handcrafted by LongIslandIcedBear
                             </p>
                         </div>
                     </div>
@@ -192,7 +230,7 @@
                         </a>
                     </span>
                     <span class="icon">
-                        <a href="#" title="Contact">
+                        <a href="/contact" title="Contact">
                             <img src="../svg/0contact.svg" alt="Contact" class="home-icon">
                         </a>
                     </span>

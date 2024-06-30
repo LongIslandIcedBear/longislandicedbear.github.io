@@ -121,7 +121,6 @@ body {
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     align-items: center;
-    flex: 0 0 45px; /* Fixed height of 41px */
     border-bottom: 3px solid #5F3B28;
 }
 
@@ -710,10 +709,10 @@ body {
 }
 
 .window.readme {
-    top: 15px;
-    left: 12%;
-    width: 76.5%;
-    height: 85%;
+    top: 25px;
+    left: 7%;
+    width: 75%;
+    height: 80%;
     display: flex;
     flex-direction: column;
 }
@@ -811,7 +810,7 @@ body {
 
 .content-readme {
     flex: 1; /* Take up the remaining space */
-    padding: 5px 20px 20px 20px;
+    padding: 5px 20px 10px 20px;
     font-size: 17px;
     line-height: 1.65;
     overflow-y: auto; /* Add vertical scroll bar */
@@ -868,12 +867,12 @@ body {
     display: flex;
     align-items: center;
     font-size: 18px;
-    margin: 20px 0px 17.5px 0px;
+    margin: 20px 0px 15px 0px;
 }
 
 .buttons {
     display: flex;
-    gap: 15px;
+    gap: 14px;
 }
 
 .agree-btn {
@@ -958,6 +957,120 @@ input[type="checkbox"]:checked + label::after {
     transform: rotate(45deg);
 }
 
+
+.window.contact {
+    top: 25px;
+    left: calc(50% - 400px);
+    display: flex;
+    flex-direction: column;
+    width: 800px; /* Adjust width as needed */
+    height: 490px; /* Adjust height as needed */
+}
+
+.contact-content {
+    display: flex;
+    flex-direction: row;
+    height: 100%;
+}
+
+.contact-left {
+    width: 38%;
+    display: flex;
+    flex-direction: column;
+    border-right: 3px solid #5F3B28;
+}
+
+.contact-left ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+}
+
+.contact-left ul li {
+    font-size: 18px;
+    margin-bottom: 15px;
+    cursor: pointer;
+    padding: 12.5px 17.5px;
+    border-bottom: 3px solid#5F3B28;
+    margin: 0px;
+    font-size: 17px;
+}
+
+.contact-left p {
+    font-size: 15px;
+    font-weight: 400;
+    margin: 5px 0px 0px 0px;
+}
+
+.contact-left ul li:hover, .contact-left ul li.active {
+    background-color: #00B88B;
+    color: #F5ECDC;
+}
+
+.contact-right {
+    width: 65%;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+}
+
+.contact-right .contact-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.contact-right .contact-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.contact-right button {
+    background-color: #00B88B;
+    border: 2px solid #5F3B28;
+    border-radius: 5px;
+    color: #F5ECDC;
+    padding: 5px 10px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.contact-right button:hover {
+    background-color: #5F3B28;
+}
+
+.contact-search{
+    border-bottom: 3px solid#5F3B28;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+}
+
+.contact-white-box{
+    position: relative;
+    display: flex;
+    justify-content: flex-end;
+    background-color: #F5ECDC; /* White background */
+    height: 25px;
+    width: 205px;
+    border-radius: 8px; /* Optional: add rounded corners */
+    border: 2px solid #5F3B28;
+}
+
+.contact-white-box .arrow-icon {
+    width: 20px;
+    height: auto; /* Maintain aspect ratio */
+    margin-right: 5px; /* Optional: add some margin */
+}
+
+.arrow-icon {
+    width: 25px;
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 18px; /* Optional: add some margin */
+}
+
 @media (max-height: 840px) {
     .desktop-window {
         height: calc(100% - 80px); /* 50px padding on each side */
@@ -1012,11 +1125,6 @@ input[type="checkbox"]:checked + label::after {
 @media (max-width: 1340px) {
     .desktop-window {
         width: calc(100% - 80px); /* 50px padding on each side */
-    }
-
-    .window.readme {
-        left: 10%;
-        width: 80%;
     }
 }
 
