@@ -1,7 +1,7 @@
 body {
     margin: 0;
     font-family: 'Courier New', Courier, monospace;
-    background: url('bk.svg'), linear-gradient(to right, #C2BDFF, #F8CEDB);
+    background: url('bk.svg'), linear-gradient(to right, #C2BDFF 0%, #E4C3DF 36%, #FDC7C8 67%, #FACBD3 82%, #F8CEDB 100%);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +23,7 @@ body {
     box-shadow: 12px 12px 0 #5F3B28;
     padding: 0;
     width: 1280px; /* 50px padding on each side */
-    height: 790px; /* 50px padding on each side */
+    height: 800px; /* 50px padding on each side */
     display: flex;
     flex-direction: column;
     position: relative;
@@ -861,19 +861,19 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-top: 10px;
+    margin-top: 25px;
 }
 
 .agreement-section p {
     display: flex;
     align-items: center;
     font-size: 18px;
+    margin: 20px 0px 17.5px 0px;
 }
 
 .buttons {
     display: flex;
     gap: 15px;
-    margin: 5px 0px 20px 0px;
 }
 
 .agree-btn {
@@ -881,7 +881,7 @@ body {
     color: #F5ECDC;
     border: 2px solid #5F3B28;
     border-radius: 5px;
-    padding: 8px 35px;
+    padding: 8px 38px;
     cursor: not-allowed;
     font-size: 15px;
 }
@@ -900,7 +900,7 @@ body {
     color: #F5ECDC;
     border: 2px solid #5F3B28;
     border-radius: 5px;
-    padding: 8px 35px;
+    padding: 8px 38px;
     cursor: pointer;
     font-size: 15px;
 }
@@ -958,6 +958,12 @@ input[type="checkbox"]:checked + label::after {
     transform: rotate(45deg);
 }
 
+@media (max-height: 840px) {
+    .desktop-window {
+        height: calc(100% - 80px); /* 50px padding on each side */
+    }
+}
+
 @media (max-height: 830px) {
     .desktopwithicon, .desktopwithicon2 {
         transform: scale(0.95);
@@ -966,29 +972,25 @@ input[type="checkbox"]:checked + label::after {
     .desktopwithicon2 {
         left: 160px;
     }
-
-    .desktop-window {
-        height: calc(100% - 80px); /* 50px padding on each side */
-    }
 }
 
 @media (max-height: 800px) {
     .window.lorem {
-        transform: scale(0.95);
+        transform: scale(0.975);
         transform-origin: top left; /* Adjust the origin if necessary */
     }
     .window.folders {
-        transform: scale(0.95);
+        transform: scale(0.975);
         transform-origin: top left; /* Adjust the origin if necessary */
         bottom: calc(1% + 60px);
     }
     .window.player {
-        transform: scale(0.95);
+        transform: scale(0.975);
         transform-origin: top left; /* Adjust the origin if necessary */
         bottom: calc(25% + 170px); /* Start with 10% of the screen width plus 50px */
     }
     .window.popout {
-        transform: scale(0.95);
+        transform: scale(0.975);
         transform-origin: top right; /* Adjust the origin if necessary */
     }
 
