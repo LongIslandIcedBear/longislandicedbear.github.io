@@ -81,7 +81,7 @@ body {
     flex: 1;
     padding: 20px;
     position: relative;
-    background-color: #EBD9CA;
+    background-color: #E8D2C0;
     border-bottom-left-radius: 21px;
     border-bottom-right-radius: 21px;
 }
@@ -254,7 +254,7 @@ body {
 }
 
 .icon-name {
-    border: 1px solid #EBD9CA;
+    border: 1px solid #E8D2C0;
     border-radius: 8px;
     padding: 4px 9px;
 }
