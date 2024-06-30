@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function switchContact(module) {
-    const tabs = document.querySelectorAll('.tab');
+    const tabs = document.querySelectorAll('.module');
     const contents = document.querySelectorAll('.content-contact');
 
     tabs.forEach(tab => {
@@ -17,10 +17,12 @@ function switchContact(module) {
     contents.forEach(content => {
         if (content.id === `content-${module}`) {
             content.classList.add('active');
-            content.style.display = 'flex';
+            content.style.visibility = 'visible';
+            content.style.position = 'relative';
         } else {
             content.classList.remove('active');
-            content.style.display = 'none';
+            content.style.visibility = 'hidden';
+            content.style.position = 'absolute';
         }
     });
 }
