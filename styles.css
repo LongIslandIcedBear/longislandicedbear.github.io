@@ -830,7 +830,7 @@ body {
 .content-readme {
     flex: 1; /* Take up the remaining space */
     padding: 5px 20px 10px 20px;
-    font-size: 17px;
+    font-size: 16px;
     line-height: 1.65;
     overflow-y: auto; /* Add vertical scroll bar */
 }
@@ -1050,16 +1050,18 @@ input[type="checkbox"]:checked + label::after {
 
 .contact-right button {
     background-color: #00B88B;
-    border: 2px solid #5F3B28;
+    border: 2px solid #F5ECDC;
     border-radius: 5px;
     color: #F5ECDC;
     padding: 5px 10px;
     cursor: pointer;
     font-size: 14px;
+    font-family: 'Courier Prime', Courier, monospace;
 }
 
 .contact-right button:hover {
-    background-color: #5F3B28;
+    background-color: #F5ECDC;
+    color: #5F3B28;
 }
 
 .contact-search{
