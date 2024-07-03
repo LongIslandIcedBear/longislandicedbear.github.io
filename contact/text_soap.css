@@ -93,9 +93,9 @@
     max-width: 600px;
     padding: 0px 24px 0px 4px;
     color: #F5ECDC;
-  }
+}
   
-  .imessage p {
+  .imessage p.from-them {
     border-radius: 1.15rem;
     line-height: 1.25;
     padding: 10px 20px 10px 18px;
@@ -103,8 +103,8 @@
     word-wrap: break-word;
   }
   
-  .imessage p::before,
-  .imessage p::after {
+  .imessage p.from-them::before,
+  .imessage p.from-them::after {
     bottom: -0.1rem;
     content: "";
     height: 1rem;
@@ -172,28 +172,30 @@
     width: 10px;
   }
   
-  p[class^="from-"].emoji {
-    background: none;
-    font-size: 2.5rem;
-  }
-  
-  p[class^="from-"].emoji::before {
-    content: none;
-  }
-  
   .no-tail::before {
     display: none;
   }
   
-  .margin-b_none {
-    margin-bottom: 0 !important;
-  }
-  
-  .margin-b_one {
-    margin-bottom: 1rem !important;
-  }
-  
-  .margin-t_one {
-    margin-top: 1rem !important;
-  }
-  
+.social-card{
+  height: 120px;
+  background-color: #5F3B28;
+  border-radius: 20px; /* 圆角效果 */
+  display: flex;
+  align-items: center;
+  padding: 10px 20px 10px 15px;
+  margin-top: 8px;
+}
+
+.user-icon {
+  margin-right: 15px;
+}
+
+.user-info h2 {
+  margin: 0;
+  font-size: 1.2em;
+}
+
+.user-info p {
+  margin: 5px 0;
+  font-size: 15px;
+}
