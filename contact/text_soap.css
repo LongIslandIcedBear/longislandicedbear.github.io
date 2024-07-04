@@ -82,6 +82,8 @@
 
 .socialmed-link img{
   margin-left: 7px;
+  width: 18px;
+  height: auto;
 }
 
 .socialmed-link:hover{
