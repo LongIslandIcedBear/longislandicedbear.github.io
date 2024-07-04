@@ -764,11 +764,6 @@ body {
     border: 2px solid #5F3B28;
 }
 
-.nav-icon {
-    width: 20px;
-    height: 20px;
-}
-
 .title-buttons {
     display: flex;
 }
@@ -1179,7 +1174,7 @@ input[type="checkbox"]:checked + label::after {
     }
 }
 
-@media screen and (max-width: 960px) {
+@media screen and (max-width: 959px) {
     body {
         background: linear-gradient(to right, #5F3B28, #5F3B28);
         color: white !important;

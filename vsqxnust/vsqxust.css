@@ -1,0 +1,70 @@
+.window.vsqxust {
+    top: 95px;
+    left: 5%;
+    width: 60%;
+    height: 65%;
+    display: flex;
+    flex-direction: column;
+}
+
+.title-bar-vsqxust {
+    background-color: #F5ECDC;
+    border-bottom: 3px solid #5F3B28;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.title-bar-box {
+    padding: 7px;
+    border-right: 3px solid #5F3B28;
+    display: flex;
+}
+
+.title-bar-box-right {
+    padding: 7px;
+    border-left: 3px solid #5F3B28;
+    display: flex;
+}
+
+.left-buttons-vsqx, .right-buttons-vsqx{
+    display: flex;
+}
+
+.nav-icon-vsqx {
+    width: auto;
+    height: 16px;
+}
+
+.content-vsqxust {
+    flex: 1; /* Take up the remaining space */
+    padding: 5px 20px 10px 20px;
+    font-size: 16px;
+    line-height: 1.65;
+    overflow-y: auto; /* Add vertical scroll bar */
+}
+
+.content-vuleft {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 240px;
+    border-right: 3px solid #5F3B28;
+    flex: 1; /* Take up the remaining space */
+}
+
+.folder-item-vu {
+    display: flex;
+    align-items: center;
+}
+
+.folder-icon-vu {
+    width: 30px;
+    height: 30px;
+    margin-right: 10px;
+}
+
+.sub-item {
+    margin-left: 30px;
+    color: #CCC; /* Light gray color for sub-items */
+}
