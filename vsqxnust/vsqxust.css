@@ -159,7 +159,7 @@
 .file-explorer-row {
     display: flex;
     border-bottom: 1px solid #5F3B28;
-    padding: 10px 5px;
+    padding: 8px 4px;
 }
 
 .file-explorer-row:hover{
