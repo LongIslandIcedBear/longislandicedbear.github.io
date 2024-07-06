@@ -245,27 +245,27 @@
                                     <div class="file-explorer-item">2019-03-04</div>
                                     <div class="file-explorer-item">UST</div>
                                 </div>
-                                <div class="file-explorer-row">
+                                <div class="file-explorer-row" data-singer="初音ミク" data-lyrics="米庫喵" data-composer="米庫喵" data-arranger="汪仔" data-button1="VSQX" data-button2="Inst (網易雲本家)" data-button1-link="https://www.vsqx.top/project/vn366" data-button2-link="https://music.163.com/#/song?id=539398813">
                                     <div class="file-explorer-item">冬已去，春未來</div>
                                     <div class="file-explorer-item">2019-01-11</div>
                                     <div class="file-explorer-item">VSQX</div>
                                 </div>
-                                <div class="file-explorer-row">
+                                <div class="file-explorer-row" data-singer="艾辰" data-lyrics="陸菱紗" data-composer="勝嶼" data-arranger="張焱" data-button1="UST" data-button2="Instrumental" data-button1-link="https://bowlroll.net/file/186363" data-button2-link="https://bowlroll.net/file/192446">
                                     <div class="file-explorer-item">落</div>
                                     <div class="file-explorer-item">2019-01-03</div>
                                     <div class="file-explorer-item">UST</div>
                                 </div>
-                                <div class="file-explorer-row">
+                                <div class="file-explorer-row" data-singer="洛天依" data-lyrics="桐叶_tongye" data-composer="桐叶_tongye" data-arranger="桐叶_tongye" data-button1="UST" data-button2="Inst (網易雲本家)" data-button1-link="https://bowlroll.net/file/185151" data-button2-link="https://music.163.com/#/song?id=1328953226">
                                     <div class="file-explorer-item">致還未遇見的你</div>
                                     <div class="file-explorer-item">2018-12-21</div>
                                     <div class="file-explorer-item">UST</div>
                                 </div>
-                                <div class="file-explorer-row">
+                                <div class="file-explorer-row" data-singer="サカナクション" data-lyrics="山口一郎" data-composer="山口一郎" data-arranger="サカナクション、富田谦" data-button1="UST" data-button2="Instrumental" data-button1-link="https://bowlroll.net/file/177080" data-button2-link="https://bowlroll.net/file/273487">
                                     <div class="file-explorer-item">新宝島</div>
                                     <div class="file-explorer-item">2018-09-12</div>
                                     <div class="file-explorer-item">UST</div>
                                 </div>
-                                <div class="file-explorer-row">
+                                <div class="file-explorer-row" data-singer="superfly" data-lyrics="越智志帆、いしわたり淳治" data-composer="多保孝一" data-arranger="蔦谷好位置" data-button1="VSQX" data-button2="Instrumental" data-button1-link="https://bowlroll.net/file/174698" data-button2-link="https://bowlroll.net/file/174708">
                                     <div class="file-explorer-item">愛をこめて花束を</div>
                                     <div class="file-explorer-item">2018-08-17</div>
                                     <div class="file-explorer-item">VSQX</div>
@@ -304,12 +304,29 @@
                 </div>
             </div>
         </div>
+        <!-- Modal Structure -->
+        <div id="detailModal" class="custom-modal" style="display: none;">
+            <div class="custom-modal-title-bar">
+                <img src="../svg/1buttons.svg" alt="Icon 1" class="custom-modal-close">
+            </div>
+            <div class="custom-modal-content">
+                <h2 id="fileName" class="custom-modal-title"></h2>
+                <p>Original Singer: <span id="originalSinger"></span></p>
+                <p>Lyrics: <span id="lyrics"></span></p>
+                <p>Composer: <span id="composer"></span></p>
+                <p>Arranger: <span id="arranger"></span></p>
+                <div class="button-container">
+                    <a id="button1" class="custom-modal-button"></a>
+                    <a id="button2" class="custom-modal-button"></a>
+                </div>
+            </div>
+        </div>
     </div>
     <div class="mobile-message">
         <img src="../svg/0mobile.svg" alt="Home" class="mobile-icon">
         <p>Unfortunately at Oak Instituto we think mobile second and this website is not available for handheld devices yet.</p>
     </div>
     <script src="../date.js"></script>
-    <script src="language.js"></script>
+    <script src="modal.js"></script>
 </body>
 </html>
