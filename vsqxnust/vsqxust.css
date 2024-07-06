@@ -1,8 +1,8 @@
 .window.vsqxust {
-    top: 95px;
+    top: calc(15% - 70px); /* Start with 10% of the screen width plus 50px */
     left: 5%;
-    width: 60%;
-    height: 65%;
+    width: 70%;
+    height: calc(65% + 50px);
     display: flex;
     flex-direction: column;
 }
@@ -38,22 +38,61 @@
 
 .content-vsqxust {
     flex: 1; /* Take up the remaining space */
-    padding: 5px 20px 10px 20px;
+    padding: 0px;
     font-size: 16px;
     line-height: 1.65;
     overflow-y: auto; /* Add vertical scroll bar */
+    display: flex;
+    flex-direction: row;
 }
 
 .content-vuleft {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    width: 240px;
+    width: 200px;
     border-right: 3px solid #5F3B28;
+    align-items: flex-start;
+    padding: 30px 20px;
+    height: 100%; /* Ensure it takes the full height */
+    box-sizing: border-box; /* Ensure padding and border are included in the height */
+}
+
+.content-vuright{
     flex: 1; /* Take up the remaining space */
+    display: flex;
+    flex-direction: column;
+    overflow-y: hidden; /* Prevent double scroll bars */
+}
+
+.haha{
+    display: flex;
+    margin: 5px 0px 0px 0px;
+}
+
+.content-vuleft-folder{
+    display: flex;
+    flex-direction: column;
+    gap: 92px;
+}
+
+.content-vuleft-item {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 15px 0px 0px 15px;
 }
 
 .folder-item-vu {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+.folder-item-vu p{
+    margin: 0px 0px;
+}
+
+.folder-item-vu-1 {
     display: flex;
     align-items: center;
 }
@@ -64,7 +103,104 @@
     margin-right: 10px;
 }
 
+.folder-icon-a {
+    width: 20px;
+    height: auto;
+}
+
 .sub-item {
-    margin-left: 30px;
-    color: #CCC; /* Light gray color for sub-items */
+    margin-left: 0px;
+    display: flex;
+}
+
+.sub-item p{
+    margin: 0px 0px;
+}
+
+.file-explorer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    overflow-y: auto; /* Add vertical scroll bar */
+    flex: 1; /* Allow it to grow and shrink with the container */
+}
+
+.file-explorer-header {
+    display: flex;
+    background-color: #F5ECDC;
+    border-bottom: 3px solid #5F3B28;
+    padding: 10px 5px;
+    position: sticky; /* Make the header sticky */
+    top: 0;
+    z-index: 1;
+}
+
+.file-explorer-header .file-explorer-column:nth-child(1) {
+    flex: 0 0 45%; /* 45% of the width */
+    box-sizing: border-box;
+}
+
+.file-explorer-header .file-explorer-column:nth-child(2) {
+    flex: 0 0 28%; /* 25% of the width */
+    box-sizing: border-box;
+}
+
+.file-explorer-header .file-explorer-column:nth-child(3) {
+    flex: 0 0 27%; /* 30% of the width */
+    box-sizing: border-box;
+}
+
+.file-explorer-column {
+    flex: 1;
+    font-weight: bold;
+    text-align: left;
+    padding: 0 10px;
+}
+
+.file-explorer-row {
+    display: flex;
+    border-bottom: 1px solid #5F3B28;
+    padding: 10px 5px;
+}
+
+.file-explorer-row .file-explorer-item:nth-child(1) {
+    flex: 0 0 45%; /* 45% of the width */
+    box-sizing: border-box;
+}
+
+.file-explorer-row .file-explorer-item:nth-child(2) {
+    flex: 0 0 28%; /* 25% of the width */
+    box-sizing: border-box;
+}
+
+.file-explorer-row .file-explorer-item:nth-child(3) {
+    flex: 0 0 27%; /* 30% of the width */
+    box-sizing: border-box;
+}
+
+.file-explorer-item {
+    flex: 1;
+    padding: 0 10px;
+}
+
+/* Optional: Styling the scrollbar for better appearance */
+.file-explorer::-webkit-scrollbar {
+    width: 20px;
+}
+
+.file-explorer::-webkit-scrollbar-track {
+    background: #F5ECDC;
+    border-left: 3px solid #5F3B28;
+}
+
+.file-explorer::-webkit-scrollbar-thumb {
+    background: #FF6B6B;
+    border: 3px solid #5F3B28;
+    border-right: 1px solid #5F3B28;
+    border-radius: 15px;
+    width: 20px;
+}
+
+.file-explorer::-webkit-scrollbar-thumb:hover {
+    background: #EF5241;
 }
