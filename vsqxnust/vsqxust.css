@@ -165,6 +165,7 @@
 .file-explorer-row:hover{
     background-color: #5F3B28;
     color: #F5ECDC;
+    cursor: pointer;
 }
 
 .file-explorer-row .file-explorer-item:nth-child(1) {
