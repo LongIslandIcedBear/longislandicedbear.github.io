@@ -1,0 +1,8 @@
+.window.about {
+    top: calc(5% - 10px); /* Start with 10% of the screen width plus 50px */
+    width: 65%;
+    height: calc(75% + 10px);
+    display: flex;
+    left: 20%;
+    flex-direction: column;
+}

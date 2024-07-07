@@ -30,7 +30,6 @@
     border-radius: 25px; /* Optional: add rounded corners */
     border: 2px solid #5F3B28;
     width: 742px;
-    height: 30px;
 }
 
 .title-bar-vsqxust {
@@ -39,12 +38,12 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 5px solid #FC6F60;
-    border-bottom: 10px solid #FC6F60;
+    border-top: 3px solid #FC6F60;
+    border-bottom: 11px solid #FC6F60;
 }
 
 .title-bar-box {
-    padding: 7px;
+    padding: 5px;
     border-right: 2px solid #5F3B28;
     border-bottom: 2px solid #5F3B28;
     display: flex;
@@ -56,7 +55,7 @@
 }
 
 .title-bar-box-right {
-    padding: 7px;
+    padding: 5px;
     display: flex;
     border-left: 2px solid #5F3B28;
     border-bottom: 2px solid #5F3B28;
@@ -71,7 +70,7 @@
 
 .nav-icon-vsqx {
     width: auto;
-    height: 16px;
+    height: 14px;
 }
 
 .content-vsqxust {
@@ -87,8 +86,8 @@
 .content-vuleft {
     display: flex;
     flex-direction: column;
-    width: 185px;
-    border-right: 3px solid #5F3B28;
+    width: 180px;
+    border-right: 2px solid #5F3B28;
     align-items: flex-start;
     padding: 20px 15px;
     height: 100%; /* Ensure it takes the full height */
@@ -167,13 +166,13 @@
 
 .file-explorer-header {
     display: flex;
-    background-color: #FC6F60;
+    background-color: #5F3B28;
     color: #F5ECDC;
     padding: 10px 5px;
     position: sticky; /* Make the header sticky */
     top: 0;
     z-index: 1;
-    border-top: 3px solid #5F3B28;
+    border-top: 2px solid #5F3B28;
 }
 
 .file-explorer-header .file-explorer-column:nth-child(1) {
