@@ -7,27 +7,66 @@
     flex-direction: column;
 }
 
-.title-bar-vsqxust {
-    background-color: #F5ECDC;
-    border-bottom: 3px solid #5F3B28;
+.title-bar-red-new{
+    background-color: #FC6F60;
+    padding: 5px 5px 5px 10px;
+    border-bottom: 3px solid #FC6F60 !important;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    justify-content: flex-end;
+    padding: 8px;
+    width: 100%;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+}
+
+.white-box-new {
+    flex-grow: 1; /* Ensure it takes up the remaining space */
+    background-color: #F5ECDC; /* White background */
+    height: 100%; /* Match the height of the parent */
+    margin: 0px 17px; /* Optional: add some margin to separate from buttons */
+    border-radius: 25px; /* Optional: add rounded corners */
+    border: 2px solid #5F3B28;
+    width: 742px;
+    height: 30px;
+}
+
+.title-bar-vsqxust {
+    padding: 0px 15px;
+    background-color: #FC6F60;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-top: 5px solid #FC6F60;
+    border-bottom: 10px solid #FC6F60;
 }
 
 .title-bar-box {
     padding: 7px;
-    border-right: 3px solid #5F3B28;
+    border-right: 2px solid #5F3B28;
+    border-bottom: 2px solid #5F3B28;
     display: flex;
+    background-color: #F5ECDC;
+}
+
+.title-bar-box:nth-child(1){
+    border-left: 2px solid #5F3B28;
 }
 
 .title-bar-box-right {
     padding: 7px;
     display: flex;
+    border-left: 2px solid #5F3B28;
+    border-bottom: 2px solid #5F3B28;
+    border-right: 2px solid #5F3B28;
+    background-color: #F5ECDC;
 }
 
 .left-buttons-vsqx, .right-buttons-vsqx{
     display: flex;
+    border-top: 2px solid #5F3B28;
 }
 
 .nav-icon-vsqx {
@@ -48,12 +87,14 @@
 .content-vuleft {
     display: flex;
     flex-direction: column;
-    width: 195px;
+    width: 185px;
     border-right: 3px solid #5F3B28;
     align-items: flex-start;
     padding: 20px 15px;
     height: 100%; /* Ensure it takes the full height */
     box-sizing: border-box; /* Ensure padding and border are included in the height */
+    background-color: #FC6F60;
+    color: #F5ECDC;
 }
 
 .content-vuright{
@@ -78,7 +119,7 @@
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 15px 0px 0px 15px;
+    margin: 15px 0px 0px 10px;
 }
 
 .folder-item-vu {
@@ -126,27 +167,32 @@
 
 .file-explorer-header {
     display: flex;
-    background-color: #F5ECDC;
-    border-bottom: 3px solid #5F3B28;
+    background-color: #FC6F60;
+    color: #F5ECDC;
     padding: 10px 5px;
     position: sticky; /* Make the header sticky */
     top: 0;
     z-index: 1;
+    border-top: 3px solid #5F3B28;
 }
 
 .file-explorer-header .file-explorer-column:nth-child(1) {
     flex: 0 0 45%; /* 45% of the width */
     box-sizing: border-box;
+    border-right: 1px solid #F5ECDC;
 }
 
 .file-explorer-header .file-explorer-column:nth-child(2) {
-    flex: 0 0 28%; /* 25% of the width */
+    flex: 0 0 27%; /* 25% of the width */
     box-sizing: border-box;
+    border-right: 1px solid #F5ECDC;
+    padding-left: 20px;
 }
 
 .file-explorer-header .file-explorer-column:nth-child(3) {
-    flex: 0 0 27%; /* 30% of the width */
+    flex: 0 0 28%; /* 30% of the width */
     box-sizing: border-box;
+    padding-left: 20px;
 }
 
 .file-explorer-column {
@@ -158,7 +204,7 @@
 
 .file-explorer-row {
     display: flex;
-    border-bottom: 1px solid #5F3B28;
+    border-bottom: 1px solid rgba(95, 59, 40, 0.5);
     padding: 8px 4px;
 }
 
@@ -171,21 +217,24 @@
 .file-explorer-row .file-explorer-item:nth-child(1) {
     flex: 0 0 45%; /* 45% of the width */
     box-sizing: border-box;
+    font-family: 'Courier Prime', Courier, monospace;
 }
 
 .file-explorer-row .file-explorer-item:nth-child(2) {
-    flex: 0 0 28%; /* 25% of the width */
+    flex: 0 0 27%; /* 25% of the width */
     box-sizing: border-box;
+    padding-left: 20px;
 }
 
 .file-explorer-row .file-explorer-item:nth-child(3) {
-    flex: 0 0 27%; /* 30% of the width */
+    flex: 0 0 28%; /* 30% of the width */
     box-sizing: border-box;
+    padding-left: 20px;
 }
 
 .file-explorer-item {
     flex: 1;
-    padding: 0 10px;
+    padding: 0px 5px 0px 10px;
 }
 
 /* Optional: Styling the scrollbar for better appearance */
@@ -196,6 +245,7 @@
 .file-explorer::-webkit-scrollbar-track {
     background: #F5ECDC;
     border-left: 3px solid #5F3B28;
+    border-top: 3px solid #5F3B28;
 }
 
 .file-explorer::-webkit-scrollbar-thumb {
@@ -216,7 +266,7 @@
     position: fixed; 
     z-index: 1000; 
     left: 52.5%; 
-    top: 47.5%; 
+    top: 50%; 
     transform: translate(-50%, -50%); 
     width: 500px; 
     height: auto; 
@@ -242,6 +292,8 @@
     padding: 20px;
     display: flex; /* 确保这行没有影响 */
     flex-direction: column; /* 确保这行没有影响 */
+    background-color: #F5ECDC;
+    color: #5F3B28;
 }
 
 .custom-modal-content p{
@@ -306,6 +358,6 @@
 .button-container {
     display: flex;
     justify-content: space-between;
-    gap: 25px;
+    gap: 20px;
     margin-top: 10px;
 }
