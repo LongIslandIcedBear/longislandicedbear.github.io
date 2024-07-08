@@ -25,7 +25,7 @@
 .white-box-new {
     flex-grow: 1; /* Ensure it takes up the remaining space */
     background-color: #F5ECDC; /* White background */
-    height: 100%; /* Match the height of the parent */
+    height: 24px; /* Match the height of the parent */
     margin: 0px 17px; /* Optional: add some margin to separate from buttons */
     border-radius: 25px; /* Optional: add rounded corners */
     border: 2px solid #5F3B28;
@@ -38,8 +38,8 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    border-top: 3px solid #FC6F60;
-    border-bottom: 11px solid #FC6F60;
+    border-top: 4px solid #FC6F60;
+    border-bottom: 13px solid #FC6F60;
 }
 
 .title-bar-box {
@@ -173,6 +173,7 @@
     top: 0;
     z-index: 1;
     border-top: 2px solid #5F3B28;
+    border-bottom: 1px solid #F5ECDC;
 }
 
 .file-explorer-header .file-explorer-column:nth-child(1) {
@@ -270,9 +271,9 @@
     width: 500px; 
     height: auto; 
     background-color: #F5ECDC;
-    border: 3px solid #5F3B28;
+    border: 4px solid #5F3B28;
     border-radius: 8px;
-    box-shadow: 5px 5px 0 #5F3B28;
+    box-shadow: 8px 8px 0 #5F3B28;
     padding: 0;
 }
 
@@ -280,8 +281,8 @@
     background-color: #FC6F60;
     padding: 8px;
     border-bottom: 3px solid #5F3B28;
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 4px;
+    border-top-right-radius: 4px;
     display: flex;
     justify-content: flex-end;
     align-items: center;

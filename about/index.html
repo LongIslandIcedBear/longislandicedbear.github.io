@@ -8,32 +8,6 @@
     <link rel="stylesheet" href="../styles.css">
     <link rel="stylesheet" href="about.css">
 </head>
-<style>
-    .folder-grid:hover {
-        background-color: #F5ECDC; 
-        cursor: default;
-    }
-
-    .folder-grid:hover .folder-item p {
-        color: #5F3B28;
-    }
-    h3{
-        background-color: #5F3B28;
-        color: #F5ECDC;
-        padding-top: 3px;
-        padding-left: 13px; /* 添加内边距以在文字前创建空格 */
-        font-size: 20px;
-    }
-    .highlight {
-            color: #EF5241;
-    }
-    .footer{
-        font-size: 14px;
-        display: flex;
-        justify-content: center;
-        margin: 40px 0px 0px 0px;
-    }
-</style>
 <body>
     <div class="desktop-window">
         <div class="title-bar">
@@ -86,7 +60,28 @@
                     <div class="title-bar-blue">
                         <img src="../svg/1buttons.svg" alt="Icon 1" class="button-icon2"> <!-- Top right corner icons -->
                     </div>
-                    1231231
+                    <div class="about-nav">
+                        <div class="navbuttons">
+                            <img src="../svg/5svg1.svg" alt="Icon 1" class="navsvgs">
+                            <img src="../svg/5svg2.svg" alt="Icon 2" class="navsvgs"> 
+                            <img src="../svg/5svg3.svg" alt="Icon 3" class="navsvgs"> 
+                            <img src="../svg/5svg4.svg" alt="Icon 4" class="navsvgs"> 
+                            <img src="../svg/5svg5.svg" alt="Icon 5" class="navsvgs"> 
+                            <img src="../svg/5svg6.svg" alt="Icon 6" class="navsvgs">
+                            <img src="../svg/5svg7.svg" alt="Icon 7" class="navsvgs"> 
+                            <img src="../svg/5svg8.svg" alt="Icon 8" class="navsvgs"> 
+                            <img src="../svg/5svg9.svg" alt="Icon 9" class="navsvgs"> 
+                            <img src="../svg/5svg10.svg" alt="Icon 10" class="navsvgs">
+                            <img src="../svg/5svg11.svg" alt="Icon 11" class="navsvgs"> 
+                            <img src="../svg/5svg12.svg" alt="Icon 12" class="navsvgs"> 
+                            <img src="../svg/5svg13.svg" alt="Icon 13" class="navsvgs"> 
+                            <img src="../svg/5svg14.svg" alt="Icon 14" class="navsvgs"> 
+                            <img src="../svg/5svg15.svg" alt="Icon 15" class="navsvgs"> 
+                        </div>
+                    </div>
+                    <div class="about-ruler-hor">
+                        <img src="../svg/5ruler.svg" alt="ruler" class="rulerhor"> 
+                    </div>
                 </div>
                 <nav class="taskbar">
                     <span class="icon">
@@ -117,29 +112,11 @@
                 </nav>
             </div>
         </div>
-        <!-- Modal Structure -->
-        <div id="detailModal" class="custom-modal" style="display: none;">
-            <div class="custom-modal-title-bar">
-                <img src="../svg/1buttons.svg" alt="Icon 1" class="custom-modal-close">
-            </div>
-            <div class="custom-modal-content">
-                <h2 id="fileName" class="custom-modal-title"></h2>
-                <p>Original Singer: <span id="originalSinger"></span></p>
-                <p>Lyrics: <span id="lyrics"></span></p>
-                <p>Composer: <span id="composer"></span></p>
-                <p>Arranger: <span id="arranger"></span></p>
-                <div class="button-container">
-                    <a id="button1" class="custom-modal-button"></a>
-                    <a id="button2" class="custom-modal-button"></a>
-                </div>
-            </div>
-        </div>
     </div>
     <div class="mobile-message">
         <img src="../svg/0mobile.svg" alt="Home" class="mobile-icon">
         <p>Unfortunately at Oak Instituto we think mobile second and this website is not available for handheld devices yet.</p>
     </div>
     <script src="../date.js"></script>
-    <script src="modal.js"></script>
 </body>
 </html>
