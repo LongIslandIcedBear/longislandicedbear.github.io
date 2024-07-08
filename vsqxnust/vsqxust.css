@@ -81,6 +81,8 @@
     overflow-y: auto; /* Add vertical scroll bar */
     display: flex;
     flex-direction: row;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 4px;
 }
 
 .content-vuleft {
@@ -275,6 +277,8 @@
     border-radius: 8px;
     box-shadow: 8px 8px 0 #5F3B28;
     padding: 0;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .custom-modal-title-bar {
@@ -294,6 +298,8 @@
     flex-direction: column; /* 确保这行没有影响 */
     background-color: #F5ECDC;
     color: #5F3B28;
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .custom-modal-content p{

@@ -828,6 +828,8 @@ body {
     font-size: 16px;
     line-height: 1.65;
     overflow-y: auto; /* Add vertical scroll bar */
+    border-bottom-right-radius: 8px;
+    border-bottom-left-radius: 8px;
 }
 
 .text-english li{
