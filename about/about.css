@@ -1,9 +1,9 @@
 .window.about {
     top: calc(5% - 10px); /* Start with 10% of the screen width plus 50px */
-    width: 65%;
+    width: 840px;
     height: calc(85% + 10px);
     display: flex;
-    left: 20%;
+    left: calc(61% - 520px);
     flex-direction: column;
     background-color: #7E5540;
 }
@@ -35,7 +35,7 @@
 }
 
 .about-ruler-hor{
-    padding: 20px 20px;
+    padding: 15px 20px 0px 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -43,6 +43,67 @@
 }
 
 .rulerhor{
-    width: 732px;
+    width: 740px;
     height: auto;
+}
+
+.rulerver{
+    width: 21px;
+    height: 676px;
+}
+
+.aboutmain{
+    margin-top: 15px;
+    display: flex;
+    flex-direction: row;
+    flex: 1; /* Take up the remaining space */
+    overflow-y: auto; /* Add vertical scroll bar */
+}
+
+.about-ruler-ver{
+    padding: 0px 30px 0px 0px;
+    display: flex;
+    justify-content: center;
+}
+
+.about-content{
+    background-color: #F5ECDC;
+    padding: 65px 50px;
+    font-family: 'Courier Prime', Courier, monospace;
+    font-weight: 500;
+    width: 634px;
+    height: 542px;
+    border-top: 3px solid #5F3B28;
+    border-right: 3px solid #5F3B28;
+    border-left: 3px solid #5F3B28;
+}
+
+/* Optional: Styling the scrollbar for better appearance */
+.aboutmain::-webkit-scrollbar {
+    width: 20px;
+}
+
+.aboutmain::-webkit-scrollbar-track {
+    background: #7E5540;
+}
+
+.aboutmain::-webkit-scrollbar-thumb {
+    background: #1D8DC0;
+    border: 3px solid #5F3B28;
+    border-right: 1px solid #5F3B28;
+    border-radius: 15px;
+    width: 20px;
+}
+
+.aboutmain::-webkit-scrollbar-thumb:hover {
+    background: #1574a0;
+}
+
+.blinking-cursor3 {
+    display: inline-block;
+    width: 2px;
+    height: 20px; /* Adjust height as needed */
+    background-color: #5F3B28;
+    animation: blink 1.25s step-end infinite;
+    vertical-align: middle;
 }
