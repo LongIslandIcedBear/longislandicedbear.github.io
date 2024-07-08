@@ -102,7 +102,7 @@
 .blinking-cursor3 {
     display: inline-block;
     width: 2px;
-    height: 20px; /* Adjust height as needed */
+    height: 21px; /* Adjust height as needed */
     background-color: #5F3B28;
     animation: blink 1.25s step-end infinite;
     vertical-align: middle;
