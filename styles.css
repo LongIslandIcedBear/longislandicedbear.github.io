@@ -14,19 +14,20 @@
 
 /* Custom Cursor Styles */
 body {
-    cursor: url('cursor/default.png'), auto; /* Default cursor */
+    cursor: url('cursor/default.svg'), auto; /* Default cursor */
+    cursor: url('cursor/default.svg'), default; /* Default cursor */
 }
 
 a, button, .pointer {
-    cursor: url('cursor/pointer.png'), pointer; /* Pointer cursor */
+    cursor: url('cursor/pointer.svg'), pointer; /* Pointer cursor */
 }
 
 textarea, input[type="text"], input[type="password"], input[type="search"] {
-    cursor: url('cursor/text.png'), text; /* Text cursor */
+    cursor: url('cursor/text.svg'), text; /* Text cursor */
 }
 
 .not-allowed {
-    cursor: url('cursor/not-allowed.png'), not-allowed; /* Not-allowed cursor */
+    cursor: url('cursor/not-allowed.svg'), not-allowed; /* Not-allowed cursor */
 }
 
 body {
