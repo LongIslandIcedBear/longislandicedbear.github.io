@@ -1,9 +1,9 @@
 .window.about {
     top: calc(5% - 10px); /* Start with 10% of the screen width plus 50px */
-    width: 840px;
+    width: 880px;
     height: calc(85% + 10px);
     display: flex;
-    left: calc(61% - 520px);
+    left: calc(61% - 540px);
     flex-direction: column;
     background-color: #7E5540;
     border-bottom-right-radius: 8px;
@@ -22,7 +22,7 @@
     flex-grow: 1; /* Ensure it takes up the remaining space */
     background-color: #F5ECDC; /* White background */
     height: 50px; /* Match the height of the parent */
-    margin: 0px 20px; /* Optional: add some margin to separate from buttons */
+    margin: 0px 40px; /* Optional: add some margin to separate from buttons */
     border-radius: 20px; /* Optional: add rounded corners */
     border: 2px solid #5F3B28;
     display: flex;
@@ -39,7 +39,6 @@
 .about-ruler-hor{
     padding: 15px 20px 0px 20px;
     display: flex;
-    justify-content: space-between;
     align-items: center;
     justify-content: center;
 }
@@ -65,7 +64,7 @@
 }
 
 .about-ruler-ver{
-    padding: 0px 30px 0px 0px;
+    padding: 0px 50px 0px 0px;
     display: flex;
     justify-content: center;
 }
