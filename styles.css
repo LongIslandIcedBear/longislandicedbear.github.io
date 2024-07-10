@@ -1,21 +1,3 @@
-/* Custom Cursor Styles */
-body {
-    cursor: url('cursor/default.svg'), auto; /* Default cursor */
-}
-
-a, button, .pointer, .desktop-icons, .popout-button-list, .folder-grid {
-    cursor: url('cursor/pointer.svg'), pointer; /* Pointer cursor */
-}
-
-textarea, input[type="text"], input[type="password"], input[type="search"] {
-    cursor: url('cursor/text.svg'), text; /* Text cursor */
-}
-
-.agree-btn, .control-icon.disabled, .not-allowed {
-    cursor: url('cursor/not-allowed.svg'), not-allowed; /* Not-allowed cursor */
-}
-
-
 @font-face {
     font-family: 'Courier Prime';
     src: url('font/CourierPrime-Bold.ttf') format('truetype');
