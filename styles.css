@@ -1,3 +1,21 @@
+/* Custom Cursor Styles */
+body {
+    cursor: url('cursor/default.svg'), auto; /* Default cursor */
+}
+
+a, button, .pointer, .desktop-icons, .popout-button-list, .folder-grid {
+    cursor: url('cursor/pointer.svg'), pointer; /* Pointer cursor */
+}
+
+textarea, input[type="text"], input[type="password"], input[type="search"] {
+    cursor: url('cursor/text.svg'), text; /* Text cursor */
+}
+
+.agree-btn, .control-icon.disabled, .not-allowed {
+    cursor: url('cursor/not-allowed.svg'), not-allowed; /* Not-allowed cursor */
+}
+
+
 @font-face {
     font-family: 'Courier Prime';
     src: url('font/CourierPrime-Bold.ttf') format('truetype');
@@ -10,24 +28,6 @@
     src: url('font/CourierPrime-Regular.ttf') format('truetype');
     font-weight: 400;
     font-style: normal;
-}
-
-/* Custom Cursor Styles */
-body {
-    cursor: url('cursor/default.svg'), auto; /* Default cursor */
-    cursor: url('cursor/default.svg'), default; /* Default cursor */
-}
-
-a, button, .pointer {
-    cursor: url('cursor/pointer.svg'), pointer; /* Pointer cursor */
-}
-
-textarea, input[type="text"], input[type="password"], input[type="search"] {
-    cursor: url('cursor/text.svg'), text; /* Text cursor */
-}
-
-.not-allowed {
-    cursor: url('cursor/not-allowed.svg'), not-allowed; /* Not-allowed cursor */
 }
 
 body {
