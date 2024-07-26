@@ -12,7 +12,7 @@
 }
 
 .window .title-bar-vbblue {
-    background-color: #3a00ff;
+    background-color: #1D8DC0;
 
 }
 
@@ -96,7 +96,7 @@
 }
 
 .buttonvb:hover {
-    background-color: #3a00ff; /* Optional: Add hover effect */
+    background-color: #1D8DC0; /* Optional: Add hover effect */
 }
 
 .window.vbdeslang {
