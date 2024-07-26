@@ -60,7 +60,28 @@
                     <div class="title-bar-vb">
                         <img src="../svg/1buttons.svg" alt="Icon 1" class="button-icon"> <!-- Top right corner icons -->
                     </div>
+                    <img src="../svg/6frame.svg" alt="frame" class="frame-img">
                     <img src="../png/standart.png" alt="standart" class="responsive-img">
+                </div>
+                <div class="window vbplayer">
+                    <div class="title-bar-vb">
+                        <img src="../svg/1buttons.svg" alt="Icon 1" class="button-icon"> <!-- Top right corner icons -->
+                    </div>
+                    <div class="player-controls">
+                        <div class="play-pause-wrapper">
+                            <div class="play-pause-btn-container">
+                                <img src="../svg/1play.svg" alt="Play" class="control-icon play-pause" id="playPauseBtn">
+                            </div>
+                            <span id="timer">00:00 / 00:00</span>
+                        </div>
+                    </div>
+                    <div class="player-content">
+                        <p>VOICE SAMPLE</p>
+                    </div>
+                    <audio id="audioPlayer">
+                        <source src="../files/betafinal.wav" type="audio/wav">
+                        Your browser does not support the audio element.
+                    </audio>
                 </div>
                 <div class="window vbdescription">
                     <div class="title-bar-vb">
@@ -107,7 +128,7 @@
                         </p>
                     </div>
                 </div>
-                <div class="window vbdownload">
+                <div class="window vbdownload" style="z-index: 2;">
                     <div class="title-bar-vbblue">
                         <img src="../svg/1buttons.svg" alt="Icon 1" class="button-icon"> <!-- Top right corner icons -->
                     </div>
@@ -117,7 +138,7 @@
                         <a href="/" class="buttonvb">NO</a>
                     </div>
                 </div>
-                <nav class="taskbar">
+                <nav class="taskbar" style="z-index: 2;">
                     <span class="icon">
                         <a href="/" title="Home">
                             <img src="../svg/0home.svg" alt="Home" class="home-icon">
@@ -154,5 +175,6 @@
     <script src="../date.js"></script>
     <script src="../norightclick.js"></script>
     <script src="expandable.js"></script>
+    <script src="musicplayervoicebank.js"></script>
 </body>
 </html>

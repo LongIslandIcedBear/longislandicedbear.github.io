@@ -27,10 +27,21 @@
     width: fit-content; /* Adjust width to fit the content */
 }
 
+.frame-img {
+    width: 100%;
+    height: calc(65vh); /* Adjust the image height based on viewport height */
+    object-fit: contain; /* Maintain aspect ratio */
+    position: absolute;
+    z-index: 0;
+    top: 31px; /* Move the frame image down by 31px */
+}
+
 .responsive-img {
     width: 100%;
     height: calc(65vh); /* Adjust the image height based on viewport height */
     object-fit: contain; /* Maintain aspect ratio */
+    position: relative;
+    z-index: 1;
 }
 
 .window.vbdescription {
@@ -61,7 +72,7 @@
 
 
 .window.vbdownload {
-    bottom: calc(1% + 141px); /* Start with 10% of the screen width plus 50px */
+    top: calc(52% + 31px); /* Start with 10% of the screen width plus 50px */
     left: calc(55% + -160px); /* Start with 10% of the screen width plus 50px */
 }
 
@@ -111,6 +122,7 @@
     margin: 0;
     padding: 25px 15px 10px 15px;
     display: flex;
+    font-weight: 700;
     justify-content: flex-start;
 }
 
@@ -136,6 +148,7 @@
     display: flex;
     align-items: center;
     padding: 10px 15px 5px 15px;
+    gap: 5px;
 }
 
 .vbdeslangexpandable:before {
@@ -146,4 +159,30 @@
 }
 .vbdeslangexpandable.expanded:before {
     transform: rotate(90deg);
+}
+
+
+.window.vbplayer {
+    top: calc(50% + 51px); /* Start with 10% of the screen width plus 50px */
+    left: calc(85% + -160px); /* Start with 10% of the screen width plus 50px */
+}
+
+.player-controls{
+    padding: 25px 10px 15px 10px;
+    justify-content: flex-start;
+}
+
+.player-content{
+    padding: 5px 22px 15px 19px;
+}
+
+.play-pause-wrapper {
+    gap: 10px;
+}
+
+#timer {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    color: #5F3B28;
 }

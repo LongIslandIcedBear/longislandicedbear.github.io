@@ -2,11 +2,11 @@
 const message = document.createElement('div');
 message.textContent = '無断転載禁止';
 message.style.position = 'absolute';
-message.style.backgroundColor = 'rgba(95, 59, 40, 0.45)';
+message.style.backgroundColor = 'rgba(95, 59, 40, 0.55)';
 message.style.color = 'white';
 message.style.padding = '2px 5px';
 message.style.borderRadius = '5px';
-message.style.fontSize = '13px';
+message.style.fontSize = '14px';
 message.style.pointerEvents = 'none';
 message.style.zIndex = '1000';
 message.style.display = 'none'; // Hide the message initially
