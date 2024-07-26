@@ -111,7 +111,7 @@
 }
 
 .window.vbdeslang {
-    top: calc(7% + 51px); /* Start with 10% of the screen width plus 50px */
+    top: calc(6% + 41px); /* Start with 10% of the screen width plus 50px */
     left: calc(80% + -160px); /* Start with 10% of the screen width plus 50px */
     padding-bottom: 15px;
 }
