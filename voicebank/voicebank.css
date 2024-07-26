@@ -1,0 +1,143 @@
+.window .title-bar-vb {
+    background-color: #CFD300;
+    border-bottom: 3px solid #5F3B28;
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 8px;
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    width: 100%; /* Ensure title bar spans the entire container width */
+}
+
+.window.vbimg {
+    top: 5px;
+    background-color: #F5ECDC; /* Soft yellow background */
+    display: flex;
+    flex-direction: column;
+    position: relative; /* Adjust if you want a different layout */
+    left: calc(23% + -100px); /* Start with 10% of the screen width plus 50px */
+    align-items: center; /* Center the content */
+    width: fit-content; /* Adjust width to fit the content */
+}
+
+.responsive-img {
+    width: 100%;
+    height: calc(65vh); /* Adjust the image height based on viewport height */
+    object-fit: contain; /* Maintain aspect ratio */
+}
+
+.window.vbdescription {
+    top: 25px;
+    right: calc(57% + -360px); /* Start with 10% of the screen width plus 50px */
+}
+
+.window.vbdescription h2{
+    font-family: 'Anton', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    font-size: 2.5rem;
+    margin: 0;
+    padding: 15px 15px 0px 15px;
+}
+
+.window.vbdescription p{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 15px 15px 15px;
+    font-weight: normal;
+    line-height: 1.5rem;
+}
+
+.hoshi{
+    color: #130055;
+}
+
+
+.window.vbdownload {
+    bottom: calc(1% + 141px); /* Start with 10% of the screen width plus 50px */
+    left: calc(55% + -160px); /* Start with 10% of the screen width plus 50px */
+}
+
+.window.vbdownload h2{
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 20px 10px 0px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.button-vbdownload {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px 20px;
+}
+
+.buttonvb {
+    display: inline-block;
+    width: 70px;
+    height: auto;
+    border: 3px solid #5F3B28;
+    padding: 6px 20px;
+    text-align: center;
+    cursor: pointer;
+    text-decoration: none;
+    color: #5F3B28;
+    font-weight: bold;
+}
+
+.buttonvb:hover {
+    background-color: #5F3B28; /* Optional: Add hover effect */
+    color: #F5ECDC;
+}
+
+.window.vbdeslang {
+    top: calc(7% + 51px); /* Start with 10% of the screen width plus 50px */
+    left: calc(80% + -160px); /* Start with 10% of the screen width plus 50px */
+    padding-bottom: 15px;
+}
+
+.window.vbdeslang h2{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 1.25rem;
+    margin: 0;
+    padding: 25px 10px 15px 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.window.vbdeslang p{
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin: 0;
+    padding: 10px 15px 15px 15px;
+    font-weight: normal;
+    line-height: 1.5rem;
+    max-width: 320px;
+}
+
+.vbdeslangcontent {
+    display: none;
+    margin-left: 20px;
+}
+
+.vbdeslangexpandable {
+    font-family: 'Open Sans', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    padding: 10px 15px 5px 15px;
+}
+
+.vbdeslangexpandable:before {
+    content: "▶";
+    display: inline-block;
+    margin-right: 5px;
+    transition: transform 0.3s;
+}
+.vbdeslangexpandable.expanded:before {
+    transform: rotate(90deg);
+}
