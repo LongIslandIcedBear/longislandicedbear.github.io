@@ -45,7 +45,7 @@
 }
 
 .window.vbdescription {
-    top: 25px;
+    top: 15px;
     right: calc(57% + -360px); /* Start with 10% of the screen width plus 50px */
 }
 
@@ -54,14 +54,14 @@
     font-weight: normal;
     font-size: 2.5rem;
     margin: 0;
-    padding: 15px 15px 0px 15px;
+    padding: 12px 15px 0px 15px;
 }
 
 .window.vbdescription p{
     font-family: 'Open Sans', Arial, Helvetica, sans-serif;
     font-size: 16px;
     margin: 0;
-    padding: 10px 15px 15px 15px;
+    padding: 0px 15px 15px 15px;
     font-weight: normal;
     line-height: 1.5rem;
 }
@@ -203,4 +203,16 @@
     /* Center the voice-sample player's contents on mobile */
     .window.vbplayer .player-controls { justify-content: center; }
     .window.vbplayer .player-content { text-align: center; }
+}
+
+/* Once every window is one-per-row, give the text panels a bit more indent */
+@media screen and (max-width: 518px) {
+    .window.vbdescription h2,
+    .window.vbdescription p { padding-left: 24px; }
+
+    .window.vbdeslang h2,
+    .window.vbdeslang .vbdeslangexpandable { padding-left: 24px; }
+
+    /* Character profile leads, above the character art */
+    .window.vbdescription { order: -1; }
 }

@@ -1355,12 +1355,15 @@ body .mobile-icon {
        .title-bar1 and my earlier reset forgot to turn it back on */
     .window.lorem .title-bar1 { display: flex !important; }
 
-    /* Search bar: move to top, restore the missing left border */
+    /* Search bar: move to top, restore the missing left border,
+       and trim its height a touch (smaller icon badge) */
     .window.search {
         height: auto !important;
-        padding: 8px 12px !important;
+        padding: 6px 12px !important;
         border-left-width: 3px !important;
     }
+    .window.search .search-icon-container { width: 34px; height: 34px; }
+    .window.search .search-icon { width: 28px; height: 28px; }
 
     /* The rest sit two-per-row */
     .window.popout  { order: 3; padding: 14px 16px !important; }
@@ -1372,8 +1375,8 @@ body .mobile-icon {
        and center each item in its cell so they don't cram to the left */
     .window.folders .fake-scrollbar { display: none !important; }
     .window.folders .folder-grid {
-        padding: 22px 18px !important;
-        grid-gap: 22px;
+        padding: 16px 16px 0px 16px !important;
+        grid-gap: 10px;
         justify-items: center;
     }
     .window.folders .folder-item { align-items: center; }
@@ -1431,6 +1434,9 @@ body .mobile-icon {
 /* Collapse to one card per row once two-up gets cramped */
 @media screen and (max-width: 518px) {
     .windows { grid-template-columns: 1fr !important; }
+    /* A touch more side padding once the chat card is full width */
+    .window.chat .chat-content { padding-left: 16px; padding-right: 16px; }
+    .window.chat .send-section { padding-left: 16px; padding-right: 16px; }
 }
 
 /* Under 510px, show only the time in the top bar (hide the date) */
@@ -1494,6 +1500,8 @@ body .mobile-icon {
         font-size: 15px;
         border-radius: 8px;
     }
+    /* Primary action (Accept & Continue) sits above Cancel on mobile */
+    .window.readme .agree-btn { order: -1; }
 }
 
 /* Tighten the window-control left margin on smaller phones (4px right stays) */

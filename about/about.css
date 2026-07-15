@@ -175,3 +175,15 @@
         border-radius: 6px;
     }
 }
+
+/* Drop trailing toolbar icons as the bar gets too narrow for all 15 */
+@media screen and (max-width: 550px) {
+    .navbuttons img[src$="5svg9.svg"],
+    .navbuttons img[src$="5svg10.svg"],
+    .navbuttons img[src$="5svg11.svg"],
+    .navbuttons img[src$="5svg12.svg"] { display: none; }
+}
+
+@media screen and (max-width: 420px) {
+    .navbuttons img[src$="5svg15.svg"] { display: none; }
+}
