@@ -13,7 +13,18 @@ function updateDateTime() {
     // Remove space between time and AM/PM
     now = now.replace(/ (\d{2}:\d{2}) (AM|PM)/, ' $1$2');
 
-    document.getElementById('datetime').textContent = now;
+    const el = document.getElementById('datetime');
+    if (!el) return;
+
+    // Split into date + time so mobile CSS can hide the date and keep the time
+    const m = now.match(/(\d{2}:\d{2}(?:AM|PM))\s*$/);
+    if (m) {
+        const time = m[1];
+        const date = now.slice(0, m.index).trim();
+        el.innerHTML = '<span class="dt-date">' + date + ' </span><span class="dt-time">' + time + '</span>';
+    } else {
+        el.textContent = now;
+    }
 }
 
 updateDateTime();

@@ -1253,3 +1253,183 @@ body .mobile-icon {
     width: auto; /* Updated this line */
     height: 125px; /* Updated this line */
 }
+
+/* ============================================================
+   MOBILE LAYOUT (homepage) — stacks the desktop "windows" into
+   a single scrollable column. CSS-only; HTML is untouched.
+   Overrides the two "not available on mobile" killer blocks above.
+   ============================================================ */
+@media screen and (max-width: 959px) {
+    body {
+        background: url('bk.svg'),
+            linear-gradient(to right, #C2BDFF 0%, #E4C3DF 36%, #FDC7C8 67%, #FACBD3 82%, #F8CEDB 100%) !important;
+        display: block !important;
+        height: auto !important;
+        min-height: 100vh;
+        align-items: initial !important;
+        justify-content: initial !important;
+        text-align: left !important;
+        color: #5F3B28 !important;
+        font-size: 18px !important;
+        margin: 0 !important;
+        padding: 0 !important;
+    }
+
+    /* Hide the "not available on mobile" notice */
+    body .mobile-message {
+        display: none !important;
+    }
+
+    /* The desktop frame becomes a full-width page */
+    .desktop-window {
+        display: flex !important;
+        flex-direction: column;
+        width: 100% !important;
+        height: auto !important;
+        max-width: none !important;
+        margin: 0 !important;
+        border-width: 0 0 5px 0 !important;
+        border-radius: 0 !important;
+        box-shadow: none !important;
+    }
+
+    .title-bar {
+        display: flex !important;
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+        position: sticky;
+        top: 0;
+        z-index: 50;
+    }
+    .title-bar .title { font-size: 17px; }
+    /* Shorten the page title to just "OAK INSTITUTO" on mobile */
+    .title-bar .title-suffix { display: none; }
+
+    .content {
+        display: flex !important;
+        flex-direction: column;
+        height: auto !important;
+    }
+
+    /* iPhone-style layout: two cards per row */
+    .windows {
+        display: grid !important;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        align-items: start;
+        gap: 16px;
+        padding: 16px 14px calc(78px + env(safe-area-inset-bottom)) 14px; /* bottom room for fixed taskbar */
+        border-radius: 0 !important;
+        min-height: calc(100vh - 60px);
+    }
+
+    /* The desktop shortcut icons duplicate the bottom nav — hide them */
+    .desktopwithicon,
+    .desktopwithicon2 {
+        display: none !important;
+    }
+
+    /* Every floating window -> a full-width stacked card */
+    .window {
+        display: block !important;
+        position: static !important;
+        top: auto !important; left: auto !important;
+        right: auto !important; bottom: auto !important;
+        transform: none !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        box-sizing: border-box;
+        box-shadow: 4px 4px 0 #5F3B28 !important;
+    }
+
+    /* Search bar + intro note span the full width, at the very top */
+    .window.search, .window.lorem { grid-column: 1 / -1; }
+    .window.search { order: 1; }
+    .window.lorem  { order: 2; padding: 20px !important; }
+    .window.lorem .content { padding: 0 !important; }
+    /* Re-enable the note's "Note" header — the killer blocks above hide
+       .title-bar1 and my earlier reset forgot to turn it back on */
+    .window.lorem .title-bar1 { display: flex !important; }
+
+    /* Search bar: move to top, restore the missing left border */
+    .window.search {
+        height: auto !important;
+        padding: 8px 12px !important;
+        border-left-width: 3px !important;
+    }
+
+    /* The rest sit two-per-row */
+    .window.popout  { order: 3; padding: 14px 16px !important; }
+    .window.player  { order: 4; }
+    .window.folders { order: 5; }
+    .window.chat    { order: 6; }
+
+    /* Folders: drop the fake desktop scrollbars, let the grid breathe,
+       and center each item in its cell so they don't cram to the left */
+    .window.folders .fake-scrollbar { display: none !important; }
+    .window.folders .folder-grid {
+        padding: 22px 18px !important;
+        grid-gap: 22px;
+        justify-items: center;
+    }
+    .window.folders .folder-item { align-items: center; }
+    .window.folders .folder-item p { text-align: center; }
+
+    /* Center the now-playing track name (all mobile widths) */
+    .window.player .player-content { text-align: center; }
+
+    /* Search bar full width */
+    .window.search .search-bar { width: 100%; }
+    .window.search input[type="text"] { width: auto; flex: 1; }
+
+    /* YouTube popout: icon + message on top, then the two buttons
+       sit side-by-side on their own full-width row (phone style). */
+    .window.popout .popout-grid { flex-wrap: wrap; }
+    .window.popout .popout-message { flex: 1; }
+    .window.popout .popout-button-list {
+        flex-direction: row;
+        flex-basis: 100%;
+        gap: 12px;
+    }
+    .window.popout .popout-button-list a { flex: 1; }
+
+    /* Taskbar -> fixed bottom nav */
+    .taskbar {
+        display: flex !important;
+        position: fixed !important;
+        bottom: 0;
+        left: 0;
+        transform: none !important;
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: space-around;
+        gap: 8px;
+        padding: 8px 8px calc(8px + env(safe-area-inset-bottom));
+        border-width: 3px 0 0 0;
+        border-radius: 0;
+        z-index: 100;
+    }
+    .taskbar .icon img { height: 42px; }
+    /* Base .icon has margin-left:10px which unbalances the spacing */
+    .taskbar .icon { margin-left: 0; }
+    /* Tooltips can overflow off-screen on mobile; disable them */
+    .taskbar .icon a::after { display: none; }
+
+    /* Reorder the bottom nav: Voicebank, VSQX/UST, Home (middle), Contact, About.
+       DOM order is home, ust, voicebank, contact, about. */
+    .taskbar .icon:nth-child(1) { order: 3; } /* home      -> middle */
+    .taskbar .icon:nth-child(2) { order: 2; } /* ust       -> second */
+    .taskbar .icon:nth-child(3) { order: 1; } /* voicebank -> far left */
+    .taskbar .icon:nth-child(4) { order: 4; } /* contact */
+    .taskbar .icon:nth-child(5) { order: 5; } /* about */
+}
+
+/* Collapse to one card per row once two-up gets cramped */
+@media screen and (max-width: 518px) {
+    .windows { grid-template-columns: 1fr !important; }
+}
+
+/* Under 510px, show only the time in the top bar (hide the date) */
+@media screen and (max-width: 510px) {
+    .dt-date { display: none !important; }
+}

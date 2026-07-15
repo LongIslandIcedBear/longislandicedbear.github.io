@@ -173,3 +173,97 @@
   margin: 5px 0;
   font-size: 15px;
 }
+
+/* =====================================================
+   MOBILE LAYOUT for the Contact "email client".
+   Stacks the two panes (list on top, message thread
+   below) and hides the redundant little chat popup.
+   Shared styles.css handles the frame/nav/title bar.
+   ===================================================== */
+@media screen and (max-width: 959px) {
+    /* The small "Here's my contact info" popup duplicates this page */
+    .window.chat { display: none !important; }
+
+    .window.contact {
+        grid-column: 1 / -1;      /* full width of the stack */
+        width: 100% !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+    }
+
+    /* Stack the master (list) and detail (thread) panes */
+    .contact-content { flex-direction: column; height: auto; }
+
+    .contact-left {
+        width: 100% !important;
+        border-right: none;
+        border-bottom: 3px solid #5F3B28;
+    }
+    .contact-right { width: 100% !important; }
+
+    /* Hide the "RE:/FW:" header — the highlighted tab already labels it */
+    .contact-title { display: none !important; }
+
+    /* Only the open panel takes up space. The inactive panels are set to
+       visibility:hidden + position:absolute by module.js, which still leaves
+       their bodies occupying blank scroll space (vertical gap + a sideways
+       drag that exposes the desktop gradient). display:none removes them. */
+    .content-contact { display: none !important; }
+    .content-contact.active { display: block !important; }
+
+    /* Fake search box stretches to fill the row; edit icon stays right */
+    .contact-white-box { flex: 1; width: auto; }
+
+    /* Write bar input becomes fluid instead of a fixed 440px */
+    .contact-input { width: auto !important; flex: 1; }
+
+    /* Close the panel with a line so the module tab below reads as a button */
+    .contact-write { border-bottom: 3px solid #5F3B28; }
+
+    /* Message bubbles: wrap long handles/emails instead of overflowing */
+    .imessage { max-width: 100%; }
+    .imessage p.from-them { overflow-wrap: anywhere; }
+    .socialmed-link { min-width: 0; overflow-wrap: anywhere; word-break: break-word; }
+
+    /* Keep social cards and their icons from overflowing narrow screens */
+    .social-card { height: auto; margin-top: 0 !important; }
+    .user-icon { height: 64px; width: auto; }
+
+    /* Pair each avatar with its own bubble via a 2-col grid so they line
+       up no matter how the text wraps — replaces the desktop's
+       hand-tuned per-avatar padding-top offsets, which don't survive
+       the mobile reflow. */
+    .imessage-with-icon {
+        display: grid;
+        grid-template-columns: auto 1fr;
+        column-gap: 9px;
+        row-gap: 18px;
+        align-items: end;    /* avatar bottom-aligns with its bubble, like desktop */
+        padding: 20px 10px 24px 10px; /* breathing room from top & write bar */
+    }
+    .imessage-with-icon .messageicons,
+    .imessage-with-icon .imessage { display: contents; }
+    .imessage-with-icon .messageicons img {
+        grid-column: 1;
+        padding-top: 0 !important;
+        margin: 0 !important;
+    }
+    .imessage-with-icon .imessage > * {
+        grid-column: 2;
+        min-width: 0;               /* let the 1fr column shrink instead of overflowing */
+        margin-top: 0 !important;
+        margin-bottom: 0 !important;
+    }
+    .imessage-with-icon .social-card { max-width: 100%; box-sizing: border-box; }
+    /* Pin avatar N and message N to the same row (avoids the grid
+       auto-placement cursor pushing them out of sync) */
+    .imessage-with-icon .messageicons img:nth-child(1),
+    .imessage-with-icon .imessage > *:nth-child(1) { grid-row: 1; }
+    .imessage-with-icon .messageicons img:nth-child(2),
+    .imessage-with-icon .imessage > *:nth-child(2) { grid-row: 2; }
+    .imessage-with-icon .messageicons img:nth-child(3),
+    .imessage-with-icon .imessage > *:nth-child(3) { grid-row: 3; }
+    .imessage-with-icon .messageicons img:nth-child(4),
+    .imessage-with-icon .imessage > *:nth-child(4) { grid-row: 4; }
+}

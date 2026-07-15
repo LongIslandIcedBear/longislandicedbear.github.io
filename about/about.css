@@ -118,5 +118,60 @@
 }
 
 .chineseab{
-    line-height: 1.4; 
+    line-height: 1.4;
+}
+
+/* =====================================================
+   MOBILE LAYOUT for the About "document" window.
+   The shared styles.css mobile block handles the frame,
+   sticky title bar, and bottom nav; this handles the
+   editor toolbar, rulers, and text area. CSS-only.
+   ===================================================== */
+@media screen and (max-width: 959px) {
+    .window.about {
+        grid-column: 1 / -1;      /* span the full width of the stack */
+        width: 100% !important;
+        height: auto !important;
+        top: auto !important;
+        left: auto !important;
+        border-bottom-left-radius: 8px;
+        border-bottom-right-radius: 8px;
+    }
+
+    /* Toolbar: shrink the 15 icons so they fit on one row */
+    .about-nav { padding: 12px 12px 0 12px; }
+    .navbuttons {
+        margin: 0;
+        height: 42px;
+        padding: 0 12px;
+    }
+    .navsvgs { height: 14px; }
+
+    /* Horizontal ruler scales down to fit */
+    .about-ruler-hor { padding: 12px 12px 0 12px; }
+    .rulerhor { width: 100%; }
+
+    /* Hide the fixed-height vertical ruler — it can't track variable text */
+    .about-ruler-ver { display: none; }
+
+    .aboutmain {
+        margin-top: 12px;
+        padding: 0 12px 12px 12px;
+        overflow: visible;
+        height: auto;
+    }
+
+    /* Text area: fluid width/height, closed box.
+       Horizontal padding is set in % to match the ruler's blue indent
+       markers (centered at 202.5/2267 ≈ 8.9% from the left and
+       2072.1/2267 → 8.6% from the right), so the text margins stay
+       aligned with them as the ruler shrinks. */
+    .about-content {
+        flex: 1;
+        width: auto !important;
+        height: auto !important;
+        padding: 40px calc(8.6% - 3px) 40px calc(8.9% - 3px) !important; /* -3px offsets the content border so text meets the markers */
+        border-bottom: 3px solid #5F3B28;
+        border-radius: 6px;
+    }
 }
