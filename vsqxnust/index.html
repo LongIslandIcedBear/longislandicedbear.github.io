@@ -17,11 +17,15 @@
     .folder-grid:hover .folder-item p {
         color: #5F3B28;
     }
+    /* Hide the folder window on mobile — the file list is the focus here */
+    @media screen and (max-width: 959px) {
+        .window.folders { display: none !important; }
+    }
 </style>
 <body>
     <div class="desktop-window">
         <div class="title-bar">
-            <span class="title">OAK INSTITUTO - VSQX & UST DOWNLOAD</span>
+            <span class="title">OAK INSTITUTO<span class="title-suffix"> - VSQX & UST DOWNLOAD</span></span>
             <div class="status-bar">
                 <span class="icon"><img src="../svg/1battery.svg" alt="Battery" class="svg-icon"></span>
                 <span class="icon"><img src="../svg/1bluetooth.svg" alt="Bluetooth" class="svg-icon"></span>

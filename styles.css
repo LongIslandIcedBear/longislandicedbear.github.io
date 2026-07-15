@@ -1301,7 +1301,11 @@ body .mobile-icon {
         top: 0;
         z-index: 50;
     }
-    .title-bar .title { font-size: 17px; }
+    .title-bar .title { font-size: 16px; }
+    /* Match the clock to the OAK INSTITUTO title size */
+    .title-bar .status-bar #datetime { font-size: 16px; }
+    /* Tighter spacing between the status-bar icons on mobile */
+    .title-bar .status-bar .icon { margin-left: 8px; }
     /* Shorten the page title to just "OAK INSTITUTO" on mobile */
     .title-bar .title-suffix { display: none; }
 
@@ -1432,4 +1436,67 @@ body .mobile-icon {
 /* Under 510px, show only the time in the top bar (hide the date) */
 @media screen and (max-width: 510px) {
     .dt-date { display: none !important; }
+}
+
+/* Even tighter status-bar icon spacing on the smallest phones */
+@media screen and (max-width: 520px) {
+    .title-bar .status-bar .icon { margin-left: 6px; }
+}
+
+/* ============================================================
+   MOBILE LAYOUT — README page (browser-style terms window).
+   ============================================================ */
+@media screen and (max-width: 959px) {
+    /* Full width, and grows with its content instead of a fixed 80% height */
+    .window.readme {
+        grid-column: 1 / -1;
+        height: auto !important;
+        min-height: 0 !important;
+    }
+
+    /* Drop the "+" new-tab button; language tabs stretch to fill the row */
+    .window.readme .add-icon-container { display: none !important; }
+    .window.readme .title-buttons { flex: 1; min-width: 0; }
+    .window.readme .tab {
+        flex: 1;
+        padding: 11px 6px !important;
+        text-align: center;
+    }
+    /* Space between the tabs and the window-control buttons; keep a small
+       constant gap from the right edge at every breakpoint */
+    .window.readme .title-bar-white .button-icon2 {
+        margin-left: 24px;
+        margin-right: 4px;
+    }
+
+    /* Slightly tighter address bar on mobile */
+    .window.readme .title-bar-readme { padding: 10px 12px; }
+
+    /* Keep the fake browser search bar looking like a search bar (not a
+       collapsed horizontal line) by giving it a real height */
+    .window.readme .title-bar-readme .white-box {
+        height: 26px;
+        min-width: 0;
+        margin: 0px 10px 0px 15px;
+    }
+
+    /* Agreement buttons: full-width stacked, tap-target sized (mobile UI) */
+    .window.readme .buttons {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+    }
+    .window.readme .agree-btn,
+    .window.readme .decline-btn {
+        width: 100%;
+        padding: 13px 16px;
+        font-size: 15px;
+        border-radius: 8px;
+    }
+}
+
+/* Tighten the window-control left margin on smaller phones (4px right stays) */
+@media screen and (max-width: 550px) {
+    .window.readme .title-bar-white .button-icon2 { margin-left: 12px; }
 }

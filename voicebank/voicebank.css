@@ -186,3 +186,21 @@
     font-size: 16px;
     color: #5F3B28;
 }
+
+/* =====================================================
+   MOBILE LAYOUT for the Voicebank page.
+   The shared styles.css already stacks the windows; this
+   just makes the character art a full-width hero so it
+   doesn't leave a tall empty gap beside a short panel in
+   the two-up (tablet) grid.
+   ===================================================== */
+@media screen and (max-width: 959px) {
+    .window.vbimg {
+        grid-column: 1 / -1;      /* full-width hero image */
+        position: relative !important; /* keep the frame overlay anchored here */
+    }
+
+    /* Center the voice-sample player's contents on mobile */
+    .window.vbplayer .player-controls { justify-content: center; }
+    .window.vbplayer .player-content { text-align: center; }
+}

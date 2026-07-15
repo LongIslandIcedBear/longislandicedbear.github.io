@@ -27,16 +27,24 @@
             color: #EF5241;
     }
     .footer{
-        font-size: 14px;
+        /* Scale the footer down with the screen so it always stays on one
+           line (caps at 14px on wide screens). ~74px is the fixed gutter
+           between the viewport and the text's available width. */
+        font-size: min(14px, calc((100vw - 74px) / 35));
+        white-space: nowrap;
         display: flex;
         justify-content: center;
         margin: 40px 0px 0px 0px;
+    }
+    /* Hide the folder window on mobile — the README is the focus here */
+    @media screen and (max-width: 959px) {
+        .window.folders { display: none !important; }
     }
 </style>
 <body>
     <div class="desktop-window">
         <div class="title-bar">
-            <span class="title">OAK INSTITUTO - README</span>
+            <span class="title">OAK INSTITUTO<span class="title-suffix"> - README</span></span>
             <div class="status-bar">
                 <span class="icon"><img src="../svg/1battery.svg" alt="Battery" class="svg-icon"></span>
                 <span class="icon"><img src="../svg/1bluetooth.svg" alt="Bluetooth" class="svg-icon"></span>
